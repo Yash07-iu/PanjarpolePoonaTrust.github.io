@@ -1,0 +1,218 @@
+/* styles.css */
+
+body {
+  font-family: 'Hind', sans-serif;
+  background: url('media/your-background-image.png') no-repeat center center fixed; /* Update the path to your background image */
+  background-size: cover; /* Cover the entire viewport */
+  margin: 0;
+  padding: 0;
+  color: #4b2e00;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Apply animations to sections */
+section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: #4b2e00;
+  text-decoration: none;
+  margin: 5px 0; /* Space between links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s; /* Smooth background change */
+  opacity: 0; /* Start hidden */
+}
+
+/* Delay for each sidebar link */
+.sidebar a:nth-child(1) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.1s; }
+.sidebar a:nth-child(2) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.2s; }
+.sidebar a:nth-child(3) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.3s; }
+.sidebar a:nth-child(4) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.4s; }
+.sidebar a:nth-child(5) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.5s; }
+.sidebar a:nth-child(6) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.6s; }
+.sidebar a:nth-child(7) { animation: slideIn 0.5s ease-in-out forwards; animation-delay: 0.7s; }
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px; /* Shift to the left */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1000; /* Ensure it is above other content */
+  background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: #4b2e00; /* Ensure this color contrasts with the background */
+  text-decoration: none;
+  margin: 5px 0; /* Space between links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background-color 0.3s; /* Smooth background change */
+  opacity: 1; /* Ensure the text is fully visible */
+}
+
+.sidebar a:hover {
+  background-color: #ffe0b3; /* Highlight on hover */
+}
+
+header {
+  background-color: #ffcc66;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-container {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  margin: 0 auto; /* Center the container */
+  background-color: #fff; /* Background color */
+  border: 2px solid #aa6a00; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Use flexbox to center the image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.lang-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#languageSwitcher {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #aa6a00;
+  background-color: #fff;
+  color: #4b2e00;
+}
+
+.products-section {
+  background-color: #fdf8f3;
+  padding: 50px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #5a3e2b;
+  text-decoration: underline;
+}
+
+.products-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #c7a17a;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.products-table th {
+  background-color: #f3e0c7;
+  color: #3e2b1f;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f1e8;
+}
+
+.elephant-image {
+  max-width: 100px;
+  height: auto;
+  margin: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #6b3e00;
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2em;
+  background-color: #fff5d7;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #5e3300;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  background-color: #ffcc66;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9rem;
+  color: #5e3300;
+}
+
+.gallery-image {
+  height: 300px;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  margin-top: 1em;
+}
