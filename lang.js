@@ -20,6 +20,13 @@ function applyTranslations() {
       el.innerHTML = currentTranslations[key];
     }
   });
+  // Also translate placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (currentTranslations[key]) {
+      el.setAttribute('placeholder', currentTranslations[key]);
+    }
+  });
 }
 
 // Initialize language switcher on DOM load
