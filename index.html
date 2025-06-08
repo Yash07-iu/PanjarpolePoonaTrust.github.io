@@ -18,19 +18,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Fade-in overlay -->
+  <div id="site-fadein-overlay">
+    <span class="fadein-namaste">NAMASTE</span>
+  </div>
+
+  <div class="lang-container">
+    <select id="languageSwitcher">
+      <option value="en" class="desktop-option">English</option>
+      <option value="hi" class="desktop-option">हिन्दी</option>
+      <option value="mr" class="desktop-option">मराठी</option>
+      <option value="en" class="mobile-option">EN</option>
+      <option value="hi" class="mobile-option">HI</option>
+      <option value="mr" class="mobile-option">MR</option>
+    </select>
+  </div>
   <header>
     <div class="header-content">
       <div class="title-row">
         <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
         <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
         <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
-      </div>
-      <div class="lang-container">
-        <select id="languageSwitcher">
-          <option value="en">English</option>
-          <option value="hi">हिन्दी</option>
-          <option value="mr">मराठी</option>
-        </select>
       </div>
     </div>
   </header>
@@ -227,29 +235,37 @@
   </div>
 </div>
 
-<!-- Fade-in overlay -->
-<div id="site-fadein-overlay">
-  <span class="fadein-namaste">NAMASTE</span>
-</div>
-
 <script src="lang.js"></script>
 <script src="chatbot.js"></script>
 <script>
-  window.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('site-fadein-overlay');
+    
+    // Clear localStorage for testing (remove this line in production)
+    // localStorage.removeItem('hasVisitedBefore');
     
     // Check if this is the first visit
     if (!localStorage.getItem('hasVisitedBefore')) {
+      console.log('First visit detected, showing overlay');
       // Show the overlay for first-time visitors
       overlay.style.display = 'flex';
+      
+      // Add fadeout class after 1.5 seconds
       setTimeout(() => {
+        console.log('Adding fadeout class');
         overlay.classList.add('fadeout');
-        setTimeout(() => { overlay.style.display = 'none'; }, 800);
+        
+        // Hide the overlay after fadeout animation completes
+        setTimeout(() => {
+          console.log('Hiding overlay');
+          overlay.style.display = 'none';
+        }, 800);
       }, 1500);
       
       // Mark that the user has visited
       localStorage.setItem('hasVisitedBefore', 'true');
     } else {
+      console.log('Returning visitor, hiding overlay');
       // Hide the overlay immediately for returning visitors
       overlay.style.display = 'none';
     }
