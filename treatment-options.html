@@ -153,6 +153,24 @@
 <script src="chatbot.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('site-fadein-overlay');
+    
+    // Check if this is the first visit
+    if (!localStorage.getItem('hasVisitedBefore')) {
+      // Show the overlay for first-time visitors
+      overlay.style.display = 'flex';
+      setTimeout(() => {
+        overlay.classList.add('fadeout');
+        setTimeout(() => { overlay.style.display = 'none'; }, 800);
+      }, 1500);
+      
+      // Mark that the user has visited
+      localStorage.setItem('hasVisitedBefore', 'true');
+    } else {
+      // Hide the overlay immediately for returning visitors
+      overlay.style.display = 'none';
+    }
+
     // Scroll to top button functionality
     const scrollToTopBtn = document.getElementById('scrollToTop');
     
