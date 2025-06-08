@@ -32,20 +32,19 @@
       <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
     </div>
   </header>
-  
 
 <main>
-  <div class="sidebar">
-    <a href="#about"><span class="sidebar-icon">🏠</span> About Us</a>
-    <a href="#mission"><span class="sidebar-icon">🎯</span> Our Mission</a>
-    <a href="#gallery"><span class="sidebar-icon">🖼️</span> Gallery</a>
-    <a href="#products"><span class="sidebar-icon">🛒</span> Products for Sale</a>
-    <a href="#donate"><span class="sidebar-icon">💝</span> Support Us</a>
-    <a href="#volunteer"><span class="sidebar-icon">🤝</span> Volunteer</a>
-    <a href="#contact"><span class="sidebar-icon">📞</span> Contact Us</a>
-    <a href="#satellite_view"><span class="sidebar-icon">🌐</span> 3D Satellite View</a>
-    <a href="treatment-options.html"><span class="sidebar-icon">💊</span> Treatment Options</a>
-  </div>
+  <nav class="floating-nav">
+    <a href="#about"><span class="nav-icon">🏠</span> About Us</a>
+    <a href="#mission"><span class="nav-icon">🎯</span> Our Mission</a>
+    <a href="#gallery"><span class="nav-icon">🖼️</span> Gallery</a>
+    <a href="#products"><span class="nav-icon">🛒</span> Products for Sale</a>
+    <a href="#donate"><span class="nav-icon">💝</span> Support Us</a>
+    <a href="#volunteer"><span class="nav-icon">🤝</span> Volunteer</a>
+    <a href="#contact"><span class="nav-icon">📞</span> Contact Us</a>
+    <a href="#satellite_view"><span class="nav-icon">🌐</span> 3D Satellite View</a>
+    <a href="treatment-options.html"><span class="nav-icon">💊</span> Treatment Options</a>
+  </nav>
 
   <section id="about">
     <h2 data-i18n="about_title">About Us</h2>
@@ -196,6 +195,8 @@
   </section>
 </main>
 
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
 <footer>
   <div class="footer-social">
     <a href="#" aria-label="Facebook"><img src="media/facebook-logo.png" alt="Facebook"></a>
@@ -238,6 +239,24 @@
       overlay.classList.add('fadeout');
       setTimeout(() => { overlay.style.display = 'none'; }, 800);
     }, 1500);
+
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   });
 </script>
 </body>
