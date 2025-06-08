@@ -18,43 +18,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-          <img src="media/logo-placeholder.png" alt="Poona Panjarpole Trust Logo" class="logo-image">
-          <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
-          <h1 class="site-title">POONA PANJARPOLE TRUST</h1>
-          <div class="lang-container">
-            <select id="languageSwitcher">
-              <option value="en">English</option>
-              <option value="hi">हिन्दी</option>
-              <option value="mr">मराठी</option>
-            </select>
-          </div>
-          <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
-        </div>
-      </header>
-      
+  <header>
+    <div class="header-content">
+      <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
+      <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
+      <div class="lang-container">
+        <select id="languageSwitcher">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="mr">मराठी</option>
+        </select>
+      </div>
+      <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
+    </div>
+  </header>
 
 <main>
-  <div class="sidebar">
-    <a href="index.html"><span class="sidebar-icon">🏠</span> Home</a>
-    <a href="index.html#about"><span class="sidebar-icon">👤</span> About Us</a>
-    <a href="index.html#gallery"><span class="sidebar-icon">🖼️</span> Gallery</a>
-    <a href="index.html#products"><span class="sidebar-icon">🛒</span> Products</a>
-    <a href="index.html#donate"><span class="sidebar-icon">💝</span> Donate</a>
-    <a href="index.html#contact"><span class="sidebar-icon">📞</span> Contact</a>
-  </div>
+  <nav class="floating-nav">
+    <a href="index.html"><span class="nav-icon">🏠</span> Home</a>
+    <a href="index.html#about"><span class="nav-icon">👤</span> About Us</a>
+    <a href="index.html#gallery"><span class="nav-icon">🖼️</span> Gallery</a>
+    <a href="index.html#products"><span class="nav-icon">🛒</span> Products</a>
+    <a href="index.html#donate"><span class="nav-icon">💝</span> Donate</a>
+    <a href="index.html#contact"><span class="nav-icon">📞</span> Contact</a>
+  </nav>
 
   <section>
     <h2 data-i18n="treatment_title">Treatment Options</h2>
     <div class="treatment-cards">
       <div class="treatment-card">
-        <span class="treatment-icon">��</span>
+        <span class="treatment-icon">💉</span>
         <h3 data-i18n="treatment_vaccination_title">Vaccination</h3>
         <p data-i18n="treatment_vaccination_desc">Protection against common cattle diseases through regular vaccination drives.</p>
       </div>
       <div class="treatment-card">
-        <span class="treatment-icon">��</span>
+        <span class="treatment-icon">🩺</span>
         <h3 data-i18n="treatment_health_title">Health Check-ups</h3>
         <p data-i18n="treatment_health_desc">Routine health assessments to ensure early detection and prevention of illness.</p>
       </div>
@@ -121,21 +119,21 @@
   </section>
 </main>
 
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
 <footer>
   <div class="footer-social">
-    <a href="#" aria-label="Facebook"><img src="media/facebook-icon.png" alt="Facebook"></a>
-    <a href="#" aria-label="Instagram"><img src="media/instagram-icon.png" alt="Instagram"></a>
-    <a href="#" aria-label="Twitter"><img src="media/twitter-icon.png" alt="Twitter"></a>
+    <a href="#" aria-label="Facebook"><img src="media/facebook-logo.png" alt="Facebook"></a>
+    <a href="#" aria-label="Instagram"><img src="media/instagram-logo.png" alt="Instagram"></a>
   </div>
   <form class="newsletter-form">
     <label for="newsletter-email" data-i18n="newsletter_label">Subscribe to our newsletter:</label>
     <input type="email" id="newsletter-email" placeholder="Your email" required data-i18n-placeholder="newsletter_placeholder">
     <button type="submit" data-i18n="newsletter_submit">Subscribe</button>
   </form>
-  <p>© 2025 Poona Panjarpole Trust. All Rights Reserved.</p>
+  <p data-i18n="footer">© 2025 Poona Panjarpole Trust. All Rights Reserved.</p>
 </footer>
 
-<script src="lang.js"></script>
 <!-- Chatbot Widget -->
 <div id="narayan-chatbot">
   <button id="narayan-chatbot-btn" aria-label="Open chat with Narayan">💬</button>
@@ -150,6 +148,29 @@
     </form>
   </div>
 </div>
+
+<script src="lang.js"></script>
 <script src="chatbot.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 </body>
 </html>
