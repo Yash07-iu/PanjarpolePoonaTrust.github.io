@@ -238,11 +238,11 @@
 <script src="lang.js"></script>
 <script src="chatbot.js"></script>
 <script>
+  // Clear localStorage for testing - remove this line in production
+  localStorage.removeItem('hasVisitedBefore');
+  
   document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('site-fadein-overlay');
-    
-    // Clear localStorage for testing (remove this line in production)
-    // localStorage.removeItem('hasVisitedBefore');
     
     // Check if this is the first visit
     if (!localStorage.getItem('hasVisitedBefore')) {
