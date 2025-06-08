@@ -107,7 +107,14 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 18px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
 }
 
 .site-title {
@@ -117,33 +124,37 @@ header {
   text-decoration: underline;
   font-weight: 700;
   letter-spacing: 0.045em;
-  padding: 0 14px;
 }
 
 .elephant-image {
   max-width: 80px;
   height: auto;
-  margin: 0 16px;
 }
 
 .lang-container {
-  position: absolute;
-  right: 18px;
+  position: fixed;
   top: 50%;
-  transform: translateY(-50%);
-  background: #fffbe6;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px #ffe0b3;
-  padding: 4px 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
 #languageSwitcher {
-  padding: 0.38em 1.1em;
-  border-radius: 8px;
+  padding: 0.3em 0.8em;
+  border-radius: 6px;
   border: 1px solid #aa6a00;
-  background-color: #fff;
+  background-color: rgba(255, 251, 230, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #4b2e00;
-  font-size: 1.13em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#languageSwitcher:hover {
+  background-color: rgba(255, 242, 204, 0.3);
 }
 
 .products-section {
@@ -801,85 +812,74 @@ iframe {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 0.6em 0.8em 0.4em 0.8em;
-  }
-
-  .header-content {
-    gap: 10px;
+    padding: 0.6em 0.8em;
   }
 
   .site-title {
     font-size: 1.5rem;
-    padding: 0 8px;
   }
 
   .elephant-image {
     max-width: 50px;
-    margin: 0 8px;
+  }
+
+  .lang-container {
+    top: 8px;
+  }
+
+  #languageSwitcher {
+    font-size: 0.9em;
+    padding: 0.25em 0.6em;
   }
 }
 
 @media screen and (max-width: 480px) {
   header {
-    padding: 0.4em 0.5em;
-  }
-
-  .header-content {
-    flex-direction: column;
-    gap: 6px;
-    align-items: center;
+    padding: 0.5em 0.6em;
   }
 
   .title-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    width: 100%;
+    gap: 8px;
   }
 
   .site-title {
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
-    line-height: 1.2;
-    text-align: center;
+    font-size: 1.1rem;
   }
 
   .elephant-image {
-    max-width: 30px;
-    margin: 0;
+    max-width: 35px;
   }
 
   .lang-container {
-    padding: 2px 6px;
-    position: static;
-    transform: none;
-    margin: 0;
-    background: transparent;
-    box-shadow: none;
+    top: 6px;
   }
 
   #languageSwitcher {
-    padding: 0.2em 0.6em;
     font-size: 0.85em;
-    border: 1px solid #aa6a00;
-    background-color: #fffbe6;
+    padding: 0.2em 0.5em;
   }
 }
 
 @media screen and (max-width: 360px) {
+  .title-row {
+    gap: 6px;
+  }
+
   .site-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .elephant-image {
-    max-width: 25px;
+    max-width: 30px;
+  }
+
+  .lang-container {
+    top: 5px;
   }
 
   #languageSwitcher {
     font-size: 0.8em;
-    padding: 0.2em 0.5em;
+    padding: 0.15em 0.4em;
   }
 }
 
