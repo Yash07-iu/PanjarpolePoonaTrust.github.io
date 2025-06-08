@@ -79,7 +79,16 @@
     "faq_q3": "How can I support cattle health at home?",
     "faq_a3": "Provide clean water, balanced nutrition, regular deworming, and a clean environment.",
     "cta_title": "Need Help? Contact Us!",
-    "cta_text": "If your cattle need medical attention or you have questions about animal health, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">email us</a> or call <strong>8999158881</strong> (WhatsApp available)."
+    "cta_text": "If your cattle need medical attention or you have questions about animal health, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">email us</a> or call <strong>8999158881</strong> (WhatsApp available).",
+    "nav_about": "About Us",
+    "nav_mission": "Our Mission",
+    "nav_gallery": "Gallery",
+    "nav_products": "Products for Sale",
+    "nav_support": "Support Us",
+    "nav_volunteer": "Volunteer",
+    "nav_contact": "Contact Us",
+    "nav_satellite": "3D Satellite View",
+    "nav_treatment": "Treatment Options"
   },
   "hi": {
     "title": "पुणे पांजरपोळ ट्रस्ट",
@@ -161,7 +170,16 @@
     "faq_q3": "घर पर पशु स्वास्थ्य कैसे बनाए रखें?",
     "faq_a3": "स्वच्छ पानी, संतुलित आहार, नियमित कीड़े मारना और स्वच्छ वातावरण दें।",
     "cta_title": "मदद चाहिए? संपर्क करें!",
-    "cta_text": "अगर आपके पशु को चिकित्सा सहायता चाहिए या कोई सवाल है, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करें</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करें।"
+    "cta_text": "अगर आपके पशु को चिकित्सा सहायता चाहिए या कोई सवाल है, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करें</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करें।",
+    "nav_about": "हमारे बारे में",
+    "nav_mission": "हमारा मिशन",
+    "nav_gallery": "गैलरी",
+    "nav_products": "बिक्री के लिए उत्पाद",
+    "nav_support": "हमें सहयोग करें",
+    "nav_volunteer": "स्वयंसेवक",
+    "nav_contact": "संपर्क करें",
+    "nav_satellite": "3डी उपग्रह दृश्य",
+    "nav_treatment": "उपचार विकल्प"
   },
   "mr": {
     "title": "पुणे पांजरपोळ ट्रस्ट",
@@ -174,7 +192,7 @@
     "contact_text": "फोन: 8999158881 (WhatsApp उपलब्ध)...",
     "satellite_view_title": "3D उपग्रह दृश्य",
     "footer": "© 2025 पुणे पांजरपोळ ट्रस्ट. सर्व हक्क राखीव.",
-    "support_title": "आम्हाला मदत करा : गाईंच्या भविष्यासाठी देणगी द्या",
+    "support_title": "आम्हाला सहाय्य करा : गाईंच्या भविष्यासाठी देणगी द्या",
     "support_text": "आपल्या देणग्यांमुळे आम्हाला २२००+ जनावरांची काळजी घेता येते. प्रत्येक रुपया महत्त्वाचा आहे!",
     "products-title": "विक्रीसाठी उत्पादने",
     "sno": "क्रमांक",
@@ -243,6 +261,15 @@
     "faq_q3": "घरच्या घरी जनावरांचे आरोग्य कसे राखावे?",
     "faq_a3": "स्वच्छ पाणी, संतुलित आहार, नियमित कृमी काढणे आणि स्वच्छता ठेवा.",
     "cta_title": "मदतीसाठी संपर्क करा!",
-    "cta_text": "तुमच्या जनावरांना वैद्यकीय मदतीची गरज असल्यास किंवा प्रश्न असल्यास, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करा</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करा."
+    "cta_text": "तुमच्या जनावरांना वैद्यकीय मदतीची गरज असल्यास किंवा प्रश्न असल्यास, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करा</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करा.",
+    "nav_about": "आमच्याबद्दल",
+    "nav_mission": "आमचे ध्येय",
+    "nav_gallery": "गॅलरी",
+    "nav_products": "विक्रीसाठी उत्पादने",
+    "nav_support": "आम्हाला सहाय्य करा",
+    "nav_volunteer": "स्वयंसेवक",
+    "nav_contact": "संपर्क साधा",
+    "nav_satellite": "3डी उपग्रह दृश्य",
+    "nav_treatment": "उपचार पर्याय"
   }
 }
