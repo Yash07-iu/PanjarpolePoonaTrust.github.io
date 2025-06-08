@@ -36,24 +36,50 @@
 
 <main>
   <div class="sidebar">
-    <a href="#about">About Us</a>
-    <a href="#mission">Our Mission</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#products">Products for Sale</a>
-    <a href="#donate">Support Us</a>
-    <a href="#contact">Contact Us</a>
-    <a href="#satellite_view">3D Satellite View</a>
-    <a href="treatment-options.html">Treatment Options</a> <!-- New link added -->
+    <a href="#about"><span class="sidebar-icon">🏠</span> About Us</a>
+    <a href="#mission"><span class="sidebar-icon">🎯</span> Our Mission</a>
+    <a href="#gallery"><span class="sidebar-icon">🖼️</span> Gallery</a>
+    <a href="#products"><span class="sidebar-icon">🛒</span> Products for Sale</a>
+    <a href="#donate"><span class="sidebar-icon">💝</span> Support Us</a>
+    <a href="#volunteer"><span class="sidebar-icon">🤝</span> Volunteer</a>
+    <a href="#contact"><span class="sidebar-icon">📞</span> Contact Us</a>
+    <a href="#satellite_view"><span class="sidebar-icon">🌐</span> 3D Satellite View</a>
+    <a href="treatment-options.html"><span class="sidebar-icon">💊</span> Treatment Options</a>
   </div>
 
   <section id="about">
     <h2 data-i18n="about_title">About Us</h2>
-    <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle.</p>
+    <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle. Our mission is to create a compassionate environment where every animal is treated with dignity and respect. We are committed to sustainable cattle farming and community welfare, blending tradition with modern care.</p>
   </section>
 
   <section id="mission">
     <h2 data-i18n="mission_title">Our Mission</h2>
-    <p data-i18n="mission_text">To create a sustainable and sacred environment for the welfare of cows and humanity.</p>
+    <p data-i18n="mission_text">To create a sustainable and sacred environment for the welfare of cows and humanity. We strive to promote ethical cattle farming, educate the community, and inspire compassion for all living beings. Our trust is dedicated to providing lifelong care, medical support, and a loving home for every animal in need.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2 data-i18n="testimonials_title">Testimonials</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p data-i18n="testimonial_1">"The trust is doing amazing work for animal welfare. I was moved by the care and love shown to every animal."</p>
+        <span data-i18n="testimonial_1_author">- Aarti, Volunteer</span>
+      </div>
+      <div class="testimonial">
+        <p data-i18n="testimonial_2">"Donating to Poona Panjarpole Trust was the best decision. I can see the impact of my contribution."</p>
+        <span data-i18n="testimonial_2_author">- Rajesh, Donor</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="volunteer">
+    <h2 data-i18n="volunteer_title">Volunteer / Join Us</h2>
+    <p data-i18n="volunteer_text">We welcome volunteers and supporters! Whether you want to help with daily care, organize events, or spread awareness, your contribution matters. <br> <a href="mailto:punepanjarpoltrust1855@gmail.com?subject=Volunteer Inquiry">Email us to join</a> or visit us to learn more.</p>
+    <form class="volunteer-form">
+      <input type="text" placeholder="Your Name" required data-i18n-placeholder="volunteer_form_name">
+      <input type="email" placeholder="Your Email" required data-i18n-placeholder="volunteer_form_email">
+      <textarea placeholder="How would you like to help?" required data-i18n-placeholder="volunteer_form_help"></textarea>
+      <button type="submit" data-i18n="volunteer_form_submit">Submit</button>
+    </form>
   </section>
 
   <section id="gallery">
@@ -149,6 +175,7 @@
         <p><strong>A/C No:</strong> 01413600000125</p>
         <p><strong>IFSC:</strong> DCBL0000014</p>
       </div>
+      <a href="#" class="btn btn-success donate-btn">Donate Online (Coming Soon)</a>
     </div>
   </section>
 
@@ -170,9 +197,48 @@
 </main>
 
 <footer>
-  <p data-i18n="footer">© 2025 Poona Panjarpole Trust. All Rights Reserved.(DEVELOPMENT STAGE :) )</p>
+  <div class="footer-social">
+    <a href="#" aria-label="Facebook"><img src="media/facebook-logo.png" alt="Facebook"></a>
+    <a href="#" aria-label="Instagram"><img src="media/instagram-logo.png" alt="Instagram"></a>
+  </div>
+  <form class="newsletter-form">
+    <label for="newsletter-email" data-i18n="newsletter_label">Subscribe to our newsletter:</label>
+    <input type="email" id="newsletter-email" placeholder="Your email" required data-i18n-placeholder="newsletter_placeholder">
+    <button type="submit" data-i18n="newsletter_submit">Subscribe</button>
+  </form>
+  <p data-i18n="footer">© 2025 Poona Panjarpole Trust. All Rights Reserved.</p>
 </footer>
 
+<!-- Chatbot Widget -->
+<div id="narayan-chatbot">
+  <button id="narayan-chatbot-btn" aria-label="Open chat with Narayan">💬</button>
+  <div id="narayan-chatbot-window" class="closed">
+    <div class="narayan-header">NARAYAN <span class="narayan-status">● online</span></div>
+    <div id="narayan-chat-messages" class="narayan-messages">
+      
+    </div>
+    <form id="narayan-chat-form">
+      <input type="text" id="narayan-chat-input" placeholder="Type your message..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+<!-- Fade-in overlay -->
+<div id="site-fadein-overlay">
+  <span class="fadein-namaste">NAMASTE</span>
+</div>
+
 <script src="lang.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('site-fadein-overlay');
+    setTimeout(() => {
+      overlay.classList.add('fadeout');
+      setTimeout(() => { overlay.style.display = 'none'; }, 800);
+    }, 1500);
+  });
+</script>
 </body>
 </html>
