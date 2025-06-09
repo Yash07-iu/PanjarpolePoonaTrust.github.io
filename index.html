@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -16,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Fade-in overlay -->
@@ -40,6 +42,17 @@
     </div>
   </header>
 
+  <div class="social-sidebar">
+    <a href="https://www.facebook.com/share/1ATGtWdcEq/" target="_blank" class="social-link facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/punepanjarpoltrust?igsh=MXY4bmR2cnd2ajhuaQ==" target="_blank" class="social-link instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+  </div>
+
 <main>
   <nav class="floating-nav">
     <a href="#about"><span class="nav-icon">🏠</span> <span data-i18n="nav_about">About Us</span></a>
@@ -50,7 +63,7 @@
     <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
     <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
     <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
-    <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
+    <a href="treatment.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
   </nav>
 
   <section id="about">
@@ -170,8 +183,8 @@
     <div class="container text-center">
       <h2 data-i18n="support_title">Support Us: Donate for the Future of Cows</h2>
       <p data-i18n="support_text">Your donations help us feed and care for over 2,200 cattle. Every rupee counts!</p>
-      <div class="qr-code-container">
-        <img src="media/qr-code.jpg" alt="QR Code for Donations" class="img-fluid" style="max-width: 100%;">
+      <div class="qr-code">
+        <img src="media/qr-code.jpg" alt="QR Code for Donations" class="img-fluid">
       </div>
       <div class="bank-details">
         <h5>Bank Details:</h5>
@@ -206,8 +219,12 @@
 
 <footer>
   <div class="footer-social">
-    <a href="#" aria-label="Facebook"><img src="media/facebook-logo.png" alt="Facebook"></a>
-    <a href="#" aria-label="Instagram"><img src="media/instagram-logo.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/share/1ATGtWdcEq/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/punepanjarpoltrust?igsh=MXY4bmR2cnd2ajhuaQ==" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
   </div>
   <form class="newsletter-form">
     <label for="newsletter-email" data-i18n="newsletter_label">Subscribe to our newsletter:</label>
