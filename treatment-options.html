@@ -18,19 +18,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="lang-container">
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </div>
   <header>
     <div class="header-content">
       <div class="title-row">
         <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
         <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
         <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
-      </div>
-      <div class="lang-container">
-        <select id="languageSwitcher">
-          <option value="en">English</option>
-          <option value="hi">हिन्दी</option>
-          <option value="mr">मराठी</option>
-        </select>
       </div>
     </div>
   </header>
@@ -138,9 +138,11 @@
 
 <!-- Chatbot Widget -->
 <div id="narayan-chatbot">
-  <button id="narayan-chatbot-btn" aria-label="Open chat with Narayan">💬</button>
+  <button id="narayan-chatbot-btn" aria-label="Open chat with NAARAD">
+    <img src="media/narad-removebg-preview.png" alt="NAARAD" class="chatbot-icon">
+  </button>
   <div id="narayan-chatbot-window" class="closed">
-    <div class="narayan-header">NARAYAN <span class="narayan-status">● online</span></div>
+    <div class="narayan-header">NAARAD <span class="narayan-status">● online</span></div>
     <div id="narayan-chat-messages" class="narayan-messages">
       
     </div>
@@ -149,6 +151,7 @@
       <button type="submit">Send</button>
     </form>
   </div>
+  <div class="chat-popup">Chat with NAARAD</div>
 </div>
 
 <script src="lang.js"></script>
