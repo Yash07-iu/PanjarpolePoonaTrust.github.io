@@ -529,31 +529,90 @@ iframe {
 /* Narayan Chatbot Styles */
 #narayan-chatbot {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 2000;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
+
+.chat-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #4b2e00;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 #narayan-chatbot-btn {
-  background: #ffcc66;
-  color: #6b3e00;
-  border: 2.5px solid #fffbe6;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 1.35em;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.18), 0 1.5px 0 #fffbe6;
+  background-color: #ffcc66;
+  border: 3px solid #fff;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+  padding: 0;
+  overflow: hidden;
 }
+
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
 #narayan-chatbot-btn:hover {
-  background: #ffe0b3;
-  transform: scale(1.09) translateY(-2px);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.22), 0 2px 0 #fffbe6;
+  transform: scale(1.1);
+  background-color: #ffd280;
 }
+
+#narayan-chatbot-btn:hover .chatbot-icon {
+  transform: scale(1.1);
+}
+
+/* Add a pulsing outline effect */
+@keyframes pulse-outline {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 204, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 102, 0);
+  }
+}
+
+#narayan-chatbot-btn {
+  animation: pulse-outline 2s infinite;
+}
+
 #narayan-chatbot-window {
   display: flex;
   flex-direction: column;
@@ -930,5 +989,44 @@ iframe {
 
 .desktop-option {
   display: block;
+}
+
+.typing {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 15px;
+  margin: 5px 0;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background-color: #ffcc66;
+  border-radius: 50%;
+  animation: typing-animation 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing-animation {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
 }
 
