@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -37,7 +38,6 @@
 
 <main>
   <nav class="floating-nav">
-    <a href="index.html"><span class="nav-icon">🏠</span> <span data-i18n="nav_about">Home</span></a>
     <a href="index.html#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
     <a href="index.html#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
     <a href="index.html#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products</span></a>
@@ -125,8 +125,14 @@
 
 <footer>
   <div class="footer-social">
-    <a href="#" aria-label="Facebook"><img src="media/facebook-logo.png" alt="Facebook"></a>
-    <a href="#" aria-label="Instagram"><img src="media/instagram-logo.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/share/1ATGtWdcEq/" target="_blank" class="social-link" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/punepanjarpoltrust?igsh=MXY4bmR2cnd2ajhuaQ==" target="_blank" class="social-link" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
   </div>
   <form class="newsletter-form">
     <label for="newsletter-email" data-i18n="newsletter_label">Subscribe to our newsletter:</label>
@@ -157,7 +163,7 @@
 <script src="lang.js"></script>
 <script src="chatbot.js"></script>
 <script>
-  window.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('site-fadein-overlay');
     
     // Check if this is the first visit
