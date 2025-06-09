@@ -1,10 +1,11 @@
-// Narayan Chatbot Script
+// NAARAD Chatbot Script
 (function() {
   const btn = document.getElementById('narayan-chatbot-btn');
   const windowEl = document.getElementById('narayan-chatbot-window');
   const form = document.getElementById('narayan-chat-form');
   const input = document.getElementById('narayan-chat-input');
   const messages = document.getElementById('narayan-chat-messages');
+  const chatPopup = document.querySelector('.chat-popup');
 
   // Language support
   let narayanLang = null; // null until chosen
@@ -12,7 +13,7 @@
 
   const botTexts = {
     en: {
-      greet: "Hello! I am Narayan, your assistant. How can I help you today? <br>Options: About Us, Gallery, Donate, Contact, Volunteer, Products, Treatment Options.<br><b>narayan narayan</b>",
+      greet: "Hello! I am NAARAD, your assistant. How can I help you today? <br>Options: About Us, Gallery, Donate, Contact, Volunteer, Products, Treatment Options.<br><b>NARAYAN...NARAYAN...</b>",
       options: "You can ask about: About Us, Gallery, Donate, Contact, Volunteer, Products, Treatment Options.",
       about: 'You can learn about our trust in the About Us section. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Go to About Us</a>.',
       gallery: 'See our cattle and activities in the Gallery. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Gallery</a>.',
@@ -25,7 +26,7 @@
       setlang: 'Language set to: ' // will append language name
     },
     hi: {
-      greet: "नमस्ते! मैं नारायण हूँ, आपकी सहायता के लिए। आप क्या जानना चाहते हैं? <br>विकल्प: हमारे बारे में, गैलरी, दान, संपर्क, स्वयंसेवक, उत्पाद, उपचार विकल्प।<br><b>narayan narayan</b>",
+      greet: "नमस्ते! मैं नारद हूँ, आपकी सहायता के लिए। आप क्या जानना चाहते हैं? <br>विकल्प: हमारे बारे में, गैलरी, दान, संपर्क, स्वयंसेवक, उत्पाद, उपचार विकल्प।<br><b>नारायण...नारायण...</b>",
       options: "आप पूछ सकते हैं: हमारे बारे में, गैलरी, दान, संपर्क, स्वयंसेवक, उत्पाद, उपचार विकल्प।",
       about: 'हमारे बारे में अनुभाग में ट्रस्ट के बारे में जानें। <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
       gallery: 'गैलरी में हमारे पशु और गतिविधियाँ देखें। <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
@@ -38,7 +39,7 @@
       setlang: 'भाषा सेट की गई: '
     },
     mr: {
-      greet: "नमस्कार! मी नारायण, तुमची मदत करण्यासाठी येथे आहे. तुम्हाला कशाबद्दल माहिती हवी आहे? <br>पर्याय: आमच्याबद्दल, गॅलरी, देणगी, संपर्क, स्वयंसेवक, उत्पादने, उपचार पर्याय.<br><b>narayan narayan</b>",
+      greet: "नमस्कार! मी नारद, तुमची मदत करण्यासाठी येथे आहे. तुम्हाला कशाबद्दल माहिती हवी आहे? <br>पर्याय: आमच्याबद्दल, गॅलरी, देणगी, संपर्क, स्वयंसेवक, उत्पादने, उपचार पर्याय.<br><b>नारायण...नारायण...</b>",
       options: "तुम्ही विचारू शकता: आमच्याबद्दल, गॅलरी, देणगी, संपर्क, स्वयंसेवक, उत्पादने, उपचार पर्याय.",
       about: 'आमच्याबद्दल विभागात ट्रस्टबद्दल जाणून घ्या. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
       gallery: 'गॅलरीमध्ये आमची जनावरे आणि उपक्रम पहा. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
@@ -51,7 +52,7 @@
       setlang: 'भाषा निवडली: '
     },
     'hi-latin': {
-      greet: "Namaste! Main Narayan hoon, aapki sahayata ke liye. Aap kya jaanna chahte hain? <br>Vikalp: Hamare baare mein, Gallery, Daana, Sampark, Swayamsevak, Utpad, Upchaar Vikalp.<br><b>narayan narayan</b>",
+      greet: "Namaste! Main NAARAD hoon, aapki sahayata ke liye. Aap kya jaanna chahte hain? <br>Vikalp: Hamare baare mein, Gallery, Daana, Sampark, Swayamsevak, Utpad, Upchaar Vikalp.<br><b>NARAYAN...NARAYAN...</b>",
       options: "Aap pooch sakte hain: Hamare baare mein, Gallery, Daana, Sampark, Swayamsevak, Utpad, Upchaar Vikalp.",
       about: 'Hamare baare mein section mein trust ke baare mein jaanein. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
       gallery: 'Gallery mein hamare pashu aur gatividhiyan dekhein. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
@@ -68,34 +69,72 @@
   // Helper: get narayan phrase for current language
   function getNarayanPhrase() {
     switch (narayanLang) {
-      case 'hi': return 'narayan narayan';
-      case 'mr': return 'नारायण नारायण';
-      case 'hi-latin': return 'narayan narayan';
-      default: return 'narayan narayan';
+      case 'hi': return 'नारायण...नारायण...';
+      case 'mr': return 'नारायण...नारायण...';
+      case 'hi-latin': return 'NARAYAN...NARAYAN...';
+      default: return 'NARAYAN...NARAYAN...';
     }
   }
 
-  // Show language selection as first message
-  function showLanguagePrompt() {
-    messages.innerHTML = '';
-    addBotMessageWithNarayan(botTexts.en.language); // Always show in English for prompt
+  // Add typing indicator
+  function addTypingIndicator() {
+    const div = document.createElement('div');
+    div.className = 'narayan-message narayan-bot typing';
+    div.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    return div;
+  }
+
+  // Remove typing indicator
+  function removeTypingIndicator(indicator) {
+    if (indicator && indicator.parentNode) {
+      indicator.parentNode.removeChild(indicator);
+    }
+  }
+
+  // Add bot message with typing effect
+  async function addBotMessageWithTyping(msg) {
+    const phrase = getNarayanPhrase();
+    const fullMessage = phrase + '<br>' + msg + '<br>' + phrase;
+    const typingIndicator = addTypingIndicator();
+    
+    // Simulate typing delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    removeTypingIndicator(typingIndicator);
+    
+    const div = document.createElement('div');
+    div.className = 'narayan-message narayan-bot';
+    div.innerHTML = fullMessage;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    
+    // Add event listeners for language buttons if present
+    div.querySelectorAll('.narayan-lang-btn').forEach(btn => {
+      btn.onclick = function() {
+        setLanguage(btn.getAttribute('data-lang'), btn.innerText);
+      };
+    });
   }
 
   // Toggle chat window
   btn.addEventListener('click', () => {
     windowEl.classList.toggle('closed');
     if (!windowEl.classList.contains('closed')) {
+      chatPopup.style.display = 'none';
       setTimeout(() => { messages.scrollTop = messages.scrollHeight; }, 100);
       if (!langChosen) {
         showLanguagePrompt();
       } else if (!messages.querySelector('.narayan-bot')) {
-        addBotMessageWithNarayan(botTexts[narayanLang].greet);
+        addBotMessageWithTyping(botTexts[narayanLang].greet);
       }
+    } else {
+      chatPopup.style.display = 'block';
     }
   });
 
   // Handle form submit
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
     const userMsg = input.value.trim();
     if (!userMsg) return;
@@ -112,12 +151,12 @@
       } else if (m.includes('hinglish')) {
         setLanguage('hi-latin', 'Hinglish');
       } else {
-        addBotMessageWithNarayan(botTexts.en.language);
+        await addBotMessageWithTyping(botTexts.en.language);
       }
       input.value = '';
       return;
     }
-    respondToUser(userMsg);
+    await respondToUser(userMsg);
     input.value = '';
   });
 
@@ -130,35 +169,14 @@
     messages.scrollTop = messages.scrollHeight;
   }
 
-  // Add bot message with narayan narayan at start and end
-  function addBotMessageWithNarayan(msg) {
-    const phrase = getNarayanPhrase();
-    addBotMessage(phrase + '<br>' + msg + '<br>' + phrase);
-  }
-
-  // Add bot message
-  function addBotMessage(msg) {
-    const div = document.createElement('div');
-    div.className = 'narayan-message narayan-bot';
-    div.innerHTML = msg;
-    messages.appendChild(div);
-    messages.scrollTop = messages.scrollHeight;
-    // Add event listeners for language buttons if present
-    div.querySelectorAll('.narayan-lang-btn').forEach(btn => {
-      btn.onclick = function() {
-        setLanguage(btn.getAttribute('data-lang'), btn.innerText);
-      };
-    });
-  }
-
-  function setLanguage(lang, label) {
+  async function setLanguage(lang, label) {
     narayanLang = lang;
     langChosen = true;
-    addBotMessageWithNarayan(botTexts[narayanLang].setlang + label + '.<br>' + botTexts[narayanLang].greet);
+    await addBotMessageWithTyping(botTexts[narayanLang].setlang + label + '.<br>' + botTexts[narayanLang].greet);
   }
 
   // Respond to user
-  function respondToUser(msg) {
+  async function respondToUser(msg) {
     const m = msg.toLowerCase();
     let reply = '';
     if (m.includes('language') || m.includes('bhasha') || m.includes('भाषा')) {
@@ -182,7 +200,13 @@
     } else {
       reply = botTexts[narayanLang].options;
     }
-    addBotMessageWithNarayan(reply);
+    await addBotMessageWithTyping(reply);
+  }
+
+  // Show language selection as first message
+  function showLanguagePrompt() {
+    messages.innerHTML = '';
+    addBotMessageWithTyping(botTexts.en.language); // Always show in English for prompt
   }
 
   // On load, always show language prompt in chat window (if opened)
