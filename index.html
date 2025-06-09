@@ -79,11 +79,11 @@
 
   <section id="volunteer">
     <h2 data-i18n="volunteer_title">Volunteer / Join Us</h2>
-    <p data-i18n="volunteer_text">We welcome volunteers and supporters! Whether you want to help with daily care, organize events, or spread awareness, your contribution matters. <br> <a href="mailto:punepanjarpoltrust1855@gmail.com?subject=Volunteer Inquiry">Email us to join</a> or visit us to learn more.</p>
-    <form class="volunteer-form">
-      <input type="text" placeholder="Your Name" required data-i18n-placeholder="volunteer_form_name">
-      <input type="email" placeholder="Your Email" required data-i18n-placeholder="volunteer_form_email">
-      <textarea placeholder="How would you like to help?" required data-i18n-placeholder="volunteer_form_help"></textarea>
+    <p data-i18n="volunteer_text">We welcome volunteers and supporters! Whether you want to help with daily care, organize events, or spread awareness, your contribution matters.</p>
+    <form class="volunteer-form" id="volunteerForm">
+      <input type="text" id="volunteerName" placeholder="Your Name" required data-i18n-placeholder="volunteer_form_name">
+      <input type="email" id="volunteerEmail" placeholder="Your Email" required data-i18n-placeholder="volunteer_form_email">
+      <textarea id="volunteerHelp" placeholder="How would you like to help?" required data-i18n-placeholder="volunteer_form_help"></textarea>
       <button type="submit" data-i18n="volunteer_form_submit">Submit</button>
     </form>
   </section>
@@ -287,6 +287,39 @@
         behavior: 'smooth'
       });
     });
+  });
+
+  document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('volunteerName').value;
+    const email = document.getElementById('volunteerEmail').value;
+    const helpText = document.getElementById('volunteerHelp').value;
+    
+    // Generate email content
+    const subject = 'New Volunteer Interest - Poona Panjarpole Trust';
+    const body = `Dear Poona Panjarpole Trust Team,
+
+I hope this email finds you well. I am writing to express my interest in volunteering with your esteemed organization.
+
+Name: ${name}
+Email: ${email}
+
+I would like to contribute in the following way:
+${helpText}
+
+I am excited about the opportunity to work with Poona Panjarpole Trust and contribute to your noble cause of animal welfare. I look forward to hearing from you about how I can best serve the organization.
+
+Thank you for considering my application.
+
+Best regards,
+${name}`;
+
+    // Create Gmail URL with pre-filled content
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=punepanjarpoltrust1855@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open Gmail in a new tab
+    window.open(gmailUrl, '_blank');
   });
 </script>
 </body>
