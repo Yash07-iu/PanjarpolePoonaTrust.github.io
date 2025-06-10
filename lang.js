@@ -39,3 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadTranslations('en'); // Default language on load
 });
+
+const translations = {
+    en: {
+        // ... existing translations ...
+        nav_home: "Home",
+        // ... existing translations ...
+    },
+    hi: {
+        // ... existing translations ...
+        nav_home: "होम",
+        // ... existing translations ...
+    },
+    mr: {
+        // ... existing translations ...
+        nav_home: "मुख्यपृष्ठ",
+        // ... existing translations ...
+    }
+};
