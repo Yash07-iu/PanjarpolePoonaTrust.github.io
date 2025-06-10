@@ -13,8 +13,8 @@
 
   const botTexts = {
     en: {
-      greet: "Hello! I am NAARAD, your assistant. How can I help you today? <br>Options: About Us, Gallery, Donate, Contact, Volunteer, Products, Treatment Options.<br><b>NARAYAN...NARAYAN...</b>",
-      options: "You can ask about: About Us, Gallery, Donate, Contact, Volunteer, Products, Treatment Options.",
+      greet: "Hello! I am NAARAD, your assistant. How can I help you today? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>About Us</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Donate</button><button class='narayan-nav-btn' data-section='contact'>Contact</button><button class='narayan-nav-btn' data-section='volunteer'>Volunteer</button><button class='narayan-nav-btn' data-section='products'>Products</button><button class='narayan-nav-btn' data-section='treatment'>Treatment Options</button></div><br><b>NARAYAN...NARAYAN...</b>",
+      options: "Please select from the options below:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>About Us</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Donate</button><button class='narayan-nav-btn' data-section='contact'>Contact</button><button class='narayan-nav-btn' data-section='volunteer'>Volunteer</button><button class='narayan-nav-btn' data-section='products'>Products</button><button class='narayan-nav-btn' data-section='treatment'>Treatment Options</button></div>",
       about: 'You can learn about our trust in the About Us section. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Go to About Us</a>.',
       gallery: 'See our cattle and activities in the Gallery. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Gallery</a>.',
       donate: 'Support us by donating! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Donate</a>.',
@@ -23,11 +23,11 @@
       products: 'Check out our products for sale. <a href="#products" onclick="document.getElementById(\'products\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Products</a>.',
       treatment: 'See our cattle treatment options. <a href="treatment-options.html">Go to Treatment Options</a>.',
       language: 'Please choose a language: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button> <button class="narayan-lang-btn" data-lang="hi-latin">Hinglish</button>',
-      setlang: 'Language set to: ' // will append language name
+      setlang: 'Language set to: '
     },
     hi: {
-      greet: "नमस्ते! मैं नारद हूँ, आपकी सहायता के लिए। आप क्या जानना चाहते हैं? <br>विकल्प: हमारे बारे में, गैलरी, दान, संपर्क, स्वयंसेवक, उत्पाद, उपचार विकल्प।<br><b>नारायण...नारायण...</b>",
-      options: "आप पूछ सकते हैं: हमारे बारे में, गैलरी, दान, संपर्क, स्वयंसेवक, उत्पाद, उपचार विकल्प।",
+      greet: "नमस्ते! मैं नारद हूँ, आपकी सहायता के लिए। आप क्या जानना चाहते हैं? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>हमारे बारे में</button><button class='narayan-nav-btn' data-section='gallery'>गैलरी</button><button class='narayan-nav-btn' data-section='donate'>दान</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पाद</button><button class='narayan-nav-btn' data-section='treatment'>उपचार विकल्प</button></div><br><b>नारायण...नारायण...</b>",
+      options: "कृपया नीचे दिए गए विकल्पों में से चुनें:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>हमारे बारे में</button><button class='narayan-nav-btn' data-section='gallery'>गैलरी</button><button class='narayan-nav-btn' data-section='donate'>दान</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पाद</button><button class='narayan-nav-btn' data-section='treatment'>उपचार विकल्प</button></div>",
       about: 'हमारे बारे में अनुभाग में ट्रस्ट के बारे में जानें। <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
       gallery: 'गैलरी में हमारे पशु और गतिविधियाँ देखें। <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
       donate: 'दान करके हमारा समर्थन करें! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
@@ -39,8 +39,8 @@
       setlang: 'भाषा सेट की गई: '
     },
     mr: {
-      greet: "नमस्कार! मी नारद, तुमची मदत करण्यासाठी येथे आहे. तुम्हाला कशाबद्दल माहिती हवी आहे? <br>पर्याय: आमच्याबद्दल, गॅलरी, देणगी, संपर्क, स्वयंसेवक, उत्पादने, उपचार पर्याय.<br><b>नारायण...नारायण...</b>",
-      options: "तुम्ही विचारू शकता: आमच्याबद्दल, गॅलरी, देणगी, संपर्क, स्वयंसेवक, उत्पादने, उपचार पर्याय.",
+      greet: "नमस्कार! मी नारद, तुमची मदत करण्यासाठी येथे आहे. तुम्हाला कशाबद्दल माहिती हवी आहे? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>आमच्याबद्दल</button><button class='narayan-nav-btn' data-section='gallery'>गॅलरी</button><button class='narayan-nav-btn' data-section='donate'>देणगी</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पादने</button><button class='narayan-nav-btn' data-section='treatment'>उपचार पर्याय</button></div><br><b>नारायण...नारायण...</b>",
+      options: "कृपया खालील पर्यायांमधून निवडा:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>आमच्याबद्दल</button><button class='narayan-nav-btn' data-section='gallery'>गॅलरी</button><button class='narayan-nav-btn' data-section='donate'>देणगी</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पादने</button><button class='narayan-nav-btn' data-section='treatment'>उपचार पर्याय</button></div>",
       about: 'आमच्याबद्दल विभागात ट्रस्टबद्दल जाणून घ्या. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
       gallery: 'गॅलरीमध्ये आमची जनावरे आणि उपक्रम पहा. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
       donate: 'आम्हाला देणगी देऊन समर्थन करा! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
@@ -52,8 +52,8 @@
       setlang: 'भाषा निवडली: '
     },
     'hi-latin': {
-      greet: "Namaste! Main NAARAD hoon, aapki sahayata ke liye. Aap kya jaanna chahte hain? <br>Vikalp: Hamare baare mein, Gallery, Daana, Sampark, Swayamsevak, Utpad, Upchaar Vikalp.<br><b>NARAYAN...NARAYAN...</b>",
-      options: "Aap pooch sakte hain: Hamare baare mein, Gallery, Daana, Sampark, Swayamsevak, Utpad, Upchaar Vikalp.",
+      greet: "Namaste! Main NAARAD hoon, aapki sahayata ke liye. Aap kya jaanna chahte hain? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>Hamare Baare Mein</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Daana</button><button class='narayan-nav-btn' data-section='contact'>Sampark</button><button class='narayan-nav-btn' data-section='volunteer'>Swayamsevak</button><button class='narayan-nav-btn' data-section='products'>Utpad</button><button class='narayan-nav-btn' data-section='treatment'>Upchaar Vikalp</button></div><br><b>NARAYAN...NARAYAN...</b>",
+      options: "Kripya niche diye gaye vikalpon mein se chunein:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>Hamare Baare Mein</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Daana</button><button class='narayan-nav-btn' data-section='contact'>Sampark</button><button class='narayan-nav-btn' data-section='volunteer'>Swayamsevak</button><button class='narayan-nav-btn' data-section='products'>Utpad</button><button class='narayan-nav-btn' data-section='treatment'>Upchaar Vikalp</button></div>",
       about: 'Hamare baare mein section mein trust ke baare mein jaanein. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
       gallery: 'Gallery mein hamare pashu aur gatividhiyan dekhein. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
       donate: 'Daana karke hamara samarthan karein! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
@@ -93,13 +93,35 @@
     }
   }
 
-  // Add bot message with typing effect
+  // Add event listeners for navigation buttons
+  function addNavButtonListeners() {
+    document.querySelectorAll('.narayan-nav-btn').forEach(btn => {
+      btn.onclick = function() {
+        const section = this.getAttribute('data-section');
+        if (section === 'treatment') {
+          window.location.href = 'treatment-options.html';
+        } else {
+          // Check if we're on the main page
+          if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+            const element = document.getElementById(section);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          } else {
+            // If we're on another page, redirect to the main page with the section
+            window.location.href = 'index.html#' + section;
+          }
+        }
+      };
+    });
+  }
+
+  // Modify addBotMessageWithTyping to add button listeners
   async function addBotMessageWithTyping(msg) {
     const phrase = getNarayanPhrase();
     const fullMessage = phrase + '<br>' + msg + '<br>' + phrase;
     const typingIndicator = addTypingIndicator();
     
-    // Simulate typing delay
     await new Promise(resolve => setTimeout(resolve, 1500));
     removeTypingIndicator(typingIndicator);
     
@@ -109,12 +131,14 @@
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
     
-    // Add event listeners for language buttons if present
+    // Add event listeners for language buttons and navigation buttons
     div.querySelectorAll('.narayan-lang-btn').forEach(btn => {
       btn.onclick = function() {
         setLanguage(btn.getAttribute('data-lang'), btn.innerText);
       };
     });
+    
+    addNavButtonListeners();
   }
 
   // Toggle chat window
