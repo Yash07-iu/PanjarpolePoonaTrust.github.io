@@ -1116,3 +1116,40 @@ iframe {
   }
 }
 
+.narayan-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.narayan-nav-btn {
+  background-color: #ffcc66;
+  color: #4b2e00;
+  border: 1px solid #4b2e00;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.narayan-nav-btn:hover {
+  background-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .narayan-buttons {
+    gap: 6px;
+  }
+  
+  .narayan-nav-btn {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+}
+
