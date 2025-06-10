@@ -246,35 +246,22 @@
   <script src="lang.js"></script>
   <script src="chatbot.js"></script>
   <script>
-    // Clear localStorage for testing - remove this line in production
-    localStorage.removeItem('hasVisitedBefore');
-    
     document.addEventListener('DOMContentLoaded', function() {
       const overlay = document.getElementById('site-fadein-overlay');
       
-      // Check if this is the first visit
-      if (!localStorage.getItem('hasVisitedBefore')) {
-        console.log('First visit detected, showing overlay');
-        // Show the overlay for first-time visitors
+      // Check if this is the first visit and if we're on index.html
+      if (!localStorage.getItem('hasVisitedBefore') && window.location.pathname.endsWith('index.html')) {
+        // Show the overlay for first-time visitors on index.html
         overlay.style.display = 'flex';
-        
-        // Add fadeout class after 1.5 seconds
         setTimeout(() => {
-          console.log('Adding fadeout class');
           overlay.classList.add('fadeout');
-          
-          // Hide the overlay after fadeout animation completes
-          setTimeout(() => {
-            console.log('Hiding overlay');
-            overlay.style.display = 'none';
-          }, 800);
+          setTimeout(() => { overlay.style.display = 'none'; }, 800);
         }, 1500);
         
         // Mark that the user has visited
         localStorage.setItem('hasVisitedBefore', 'true');
       } else {
-        console.log('Returning visitor, hiding overlay');
-        // Hide the overlay immediately for returning visitors
+        // Hide the overlay immediately for returning visitors or other pages
         overlay.style.display = 'none';
       }
 
