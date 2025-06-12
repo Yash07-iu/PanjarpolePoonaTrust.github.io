@@ -44,38 +44,34 @@ const translations = {
     en: {
         // ... existing translations ...
         nav_home: "Home",
+        nav_book: "Gau Chalisa",
+        // ... existing translations ...
+        "book_title": "गौ-चालीसा",
+        "book_title_en": "Gau Chalisa",
+        "book_title_mr": "गौ चालीसा",
+        "book_subtitle": "Sacred Verses in Praise of the Divine Cow",
         // ... existing translations ...
     },
     hi: {
         // ... existing translations ...
         nav_home: "होम",
+        nav_book: "गौ-चालीसा",
+        // ... existing translations ...
+        "book_title": "गौ-चालीसा",
+        "book_title_en": "Gau Chalisa",
+        "book_title_mr": "गौ चालीसा",
+        "book_subtitle": "दिव्य गाय की प्रशंसा में पवित्र श्लोक",
         // ... existing translations ...
     },
     mr: {
         // ... existing translations ...
         nav_home: "मुख्यपृष्ठ",
-        "products-title": "विक्रीसाठी उत्पादने",
-        "sno": "क्र.",
-        "product": "उत्पादन",
-        "price": "किंमत",
-        "ghee": "तूप",
-        "buttermilk": "ताक",
-        "biological-letter(jaivik-khat)": "जैविक खात",
-        "vermi-compost(gandul-khat)": "गांडूळ खत",
-        "vermiwash(vermi-wash)": "वर्मीवॉश",
-        "dashparni-ark": "दशपर्णी अर्क",
-        "gomutra": "गोमुत्र",
-        "gokrupamrit": "गोकृपामृत",
-        "cow-dung-cake": "गोवरी",
-        "price-ghee": "२०००/ली",
-        "price-buttermilk": "२०/ली",
-        "price-biological-letter": "२०/कि",
-        "price-vermi-compost": "२५/कि",
-        "price-vermiwash": "६०/ली",
-        "price-dashparni-ark": "१२०/ली",
-        "price-gomutra": "३०/ली",
-        "price-gokrupamrit": "३०/ली",
-        "price-cow-dung-cake": "५/नग",
+        nav_book: "गौ-चालीसा",
+        // ... existing translations ...
+        "book_title": "गौ-चालीसा",
+        "book_title_en": "Gau Chalisa",
+        "book_title_mr": "गौ चालीसा",
+        "book_subtitle": "दिव्य गायाच्या स्तुतीतील पवित्र श्लोक",
         // ... existing translations ...
     }
 };
