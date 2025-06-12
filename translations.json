@@ -1,344 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poona Panjarpole Trust</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Fade-in overlay -->
-  <div id="site-fadein-overlay">
-    <span class="fadein-namaste">NAMASTE</span>
-  </div>
-
-  <div class="lang-container">
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-      <option value="mr">मराठी</option>
-    </select>
-  </div>
-  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
-  <header>
-    <div class="header-content">
-      <div class="title-row">
-        <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
-        <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
-        <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <nav class="floating-nav">
-      <a href="#" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
-      <a href="#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
-      <a href="#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
-      <a href="#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
-      <a href="#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a
-      <a href="#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
-      <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
-      <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
-      <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
-      <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
-    </nav>
-
-    <section id="about">
-      <h2 data-i18n="about_title">About Us</h2>
-      <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle. Our mission is to create a compassionate environment where every animal is treated with dignity and respect. We are committed to sustainable cattle farming and community welfare, blending tradition with modern care.</p>
-    </section>
-
-    <section id="mission">
-      <h2 data-i18n="mission_title">Our Mission</h2>
-      <p data-i18n="mission_text">To create a sustainable and sacred environment for the welfare of cows and humanity. We strive to promote ethical cattle farming, educate the community, and inspire compassion for all living beings. Our trust is dedicated to providing lifelong care, medical support, and a loving home for every animal in need.</p>
-    </section>
-
-    <section id="gallery">
-      <h2 data-i18n="gallery_title">Gallery</h2>
-      <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img src="media/image1.png" class="d-block w-100 gallery-image" alt="Image 1"></div>
-          <div class="carousel-item"><img src="media/image2.png" class="d-block w-100 gallery-image" alt="Image 2"></div>
-          <div class="carousel-item"><img src="media/image3.png" class="d-block w-100 gallery-image" alt="Image 3"></div>
-          <div class="carousel-item"><img src="media/image4.png" class="d-block w-100 gallery-image" alt="Image 4"></div>
-          <div class="carousel-item"><img src="media/image5.png" class="d-block w-100 gallery-image" alt="Image 5"></div>
-          <div class="carousel-item"><img src="media/image6.png" class="d-block w-100 gallery-image" alt="Image 6"></div>
-          <div class="carousel-item"><img src="media/image7.png" class="d-block w-100 gallery-image" alt="Image 7"></div>
-          <div class="carousel-item"><img src="media/image8.png" class="d-block w-100 gallery-image" alt="Image 8"></div>
-          <div class="carousel-item"><img src="media/image9.png" class="d-block w-100 gallery-image" alt="Image 9"></div>
-          <div class="carousel-item"><img src="media/image10.png" class="d-block w-100 gallery-image" alt="Image 10"></div>
-        </div>
-        <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="products" class="products-section">
-      <div class="container">
-        <h2 class="section-title" data-i18n="products-title">Products for Sale</h2>
-        <table class="products-table">
-          <thead>
-            <tr>
-              <th data-i18n="sno">S.No.</th>
-              <th data-i18n="product">Product</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="s1">1</td>
-              <td data-i18n="ghee">Ghee</td>
-            </tr>
-            <tr>
-              <td data-i18n="s2">2</td>
-              <td data-i18n="buttermilk">Buttermilk</td>
-            </tr>
-            <tr>
-              <td data-i18n="s3">3</td>
-              <td data-i18n="biological-letter(jaivik-khat)">Biological Letter (Jaivik Khat)</td>
-            </tr>
-            <tr>
-              <td data-i18n="s4">4</td>
-              <td data-i18n="vermi-compost(gandul-khat)">Vermi Compost (Gandul Khat)</td>
-            </tr>
-            <tr>
-              <td data-i18n="s5">5</td>
-              <td data-i18n="vermiwash(vermi-wash)">Vermiwash</td>
-            </tr>
-            <tr>
-              <td data-i18n="s6">6</td>
-              <td data-i18n="dashparni-ark">Disharine Extract (Darshparni Ark)</td>
-            </tr>
-            <tr>
-              <td data-i18n="s7">7</td>
-              <td data-i18n="gomutra">Gomutra</td>
-            </tr>
-            <tr>
-              <td data-i18n="s8">8</td>
-              <td data-i18n="gokrupamrit">Gokrupamrit</td>
-            </tr>
-            <tr>
-              <td data-i18n="s9">9</td>
-              <td data-i18n="cow-dung-cake">Cow Dung Cake</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="products-note" data-i18n="products_note">*All the aforementioned products are available solely through offline purchase at our sacred premises</p>
-      </div>
-    </section>
-    
-    <section id="donate" class="section" data-aos="fade-up">
-      <div class="container text-center">
-        <h2 data-i18n="support_title">Support Us: Donate for the Future of Cows</h2>
-        <p data-i18n="support_text">Your donations help us feed and care for over 2,200 cattle. Every rupee counts!</p>
-        <div class="qr-code">
-          <img src="media/qr-code_final.jpg" alt="QR Code for Donations" class="img-fluid">
-        </div>
-        <div class="bank-details">
-          <h5>Bank Details:</h5>
-          <p><strong>Poona Panjarpole Trust</strong></p>
-          <p><strong>Bank Name:</strong> DCB Bank</p>
-          <p><strong>Branch:</strong> DP Road Pune</p>
-          <p><strong>A/C No:</strong> 01413600000125</p>
-          <p><strong>IFSC:</strong> DCBL0000014</p>
-          <p><strong>UPI ID:</strong> Mswipe.1400041924000711@kotak</p>
-        </div>
-        <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="btn btn-success donate-btn">Donate Online</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 data-i18n="contact_title">Contact Us</h2>
-      <p data-i18n="contact_text">
-        Phone: 8999158881 (WhatsApp available)<br>
-        Email: punepanjarpoltrust1855@gmail.com<br>
-        Address: Pune-Nashik Highway, Bhosari, Pune – 411039
-      </p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.777225197959!2d73.8483264!3d18.6416365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c78daa88594b%3A0x48269788935abadd!2sPanjarpol%20%E0%A4%AA%E0%A4%BE%E0%A4%82%E0%A4%9A%E0%A4%B0%E0%A4%AA%E0%A5%8B%E0%A4%B3%20%E0%A4%97%E0%A5%8C%E0%A4%B7%E0%A4%BE%E0%A4%B3%E0%A4%BE!5e0!3m2!1sen!2sin!4v1716284024190!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-    
-
-    <section id="satellite_view">
-      <h2 data-i18n="satellite_view_title">3D Satellite View</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1748248205514!6m8!1m7!1sN_AsvIcu7j2EVBNyjcMO9A!2m2!1d18.64139095681827!2d73.85071435754628!3f111.62566725136558!4f-16.404613328355467!5f0.7820865974627469" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-  </main>
-
-  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
-
-  <footer>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/share/1ATGtWdcEq/" target="_blank" class="social-link" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-        <span>Facebook</span>
-      </a>
-      <a href="https://www.instagram.com/punepanjarpoltrust?igsh=MXY4bmR2cnd2ajhuaQ==" target="_blank" class="social-link" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
-      </a>
-    </div>
-    <form class="newsletter-form">
-      <label for="newsletter-email" data-i18n="newsletter_label">Subscribe to our newsletter:</label>
-      <input type="email" id="newsletter-email" placeholder="Your email" required data-i18n-placeholder="newsletter_placeholder">
-      <button type="submit" data-i18n="newsletter_submit">Subscribe</button>
-    </form>
-    <p data-i18n="footer">© 2025 Poona Panjarpole Trust. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Chatbot Widget -->
-  <div id="narayan-chatbot">
-    <button id="narayan-chatbot-btn" aria-label="Open chat with NAARAD">
-      <img src="media/narad-removebg-preview.png" alt="NAARAD" class="chatbot-icon">
-    </button>
-    <div id="narayan-chatbot-window" class="closed">
-      <div class="narayan-header">NAARAD <span class="narayan-status">● online</span></div>
-      <div id="narayan-chat-messages" class="narayan-messages">
-        
-      </div>
-      <form id="narayan-chat-form">
-        <input type="text" id="narayan-chat-input" placeholder="Type your message..." autocomplete="off" required />
-        <button type="submit">Send</button>
-      </form>
-    </div>
-    <div class="chat-popup">Chat with NAARAD</div>
-  </div>
-
-  <script src="lang.js"></script>
-  <script src="chatbot.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const overlay = document.getElementById('site-fadein-overlay');
-      
-      // Check if this is the first visit and if we're on index.html
-      if (!localStorage.getItem('hasVisitedBefore') && window.location.pathname.endsWith('index.html')) {
-        // Show the overlay for first-time visitors on index.html
-        overlay.style.display = 'flex';
-        setTimeout(() => {
-          overlay.classList.add('fadeout');
-          setTimeout(() => { overlay.style.display = 'none'; }, 800);
-        }, 1500);
-        
-        // Mark that the user has visited
-        localStorage.setItem('hasVisitedBefore', 'true');
-      } else {
-        // Hide the overlay immediately for returning visitors or other pages
-        overlay.style.display = 'none';
-      }
-
-      // Scroll to top button functionality
-      const scrollToTopBtn = document.getElementById('scrollToTop');
-      
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          scrollToTopBtn.classList.add('visible');
-        } else {
-          scrollToTopBtn.classList.remove('visible');
-        }
-      });
-
-      scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-
-      // Book page navigation
-      const bookPages = Array.from(document.querySelectorAll('.book-page')).sort((a, b) => {
-        return parseInt(a.dataset.page) - parseInt(b.dataset.page);
-      });
-      const prevButton = document.querySelector('.prev-page');
-      const nextButton = document.querySelector('.next-page');
-      let currentPage = 0;
-
-      function updatePages() {
-        bookPages.forEach((page, index) => {
-          page.classList.remove('active', 'next', 'prev');
-          if (index === currentPage) {
-            page.classList.add('active');
-          } else if (index === currentPage + 1) {
-            page.classList.add('next');
-          } else if (index === currentPage - 1) {
-            page.classList.add('prev');
-          }
-        });
-
-        // Update button states
-        prevButton.disabled = currentPage === 0;
-        nextButton.disabled = currentPage === bookPages.length - 1;
-      }
-
-      // Initialize first page
-      updatePages();
-
-      // Event listeners for navigation
-      prevButton.addEventListener('click', () => {
-        if (currentPage > 0) {
-          currentPage--;
-          updatePages();
-        }
-      });
-
-      nextButton.addEventListener('click', () => {
-        if (currentPage < bookPages.length - 1) {
-          currentPage++;
-          updatePages();
-        }
-      });
-    });
-
-    document.getElementById('volunteerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('volunteerName').value;
-      const email = document.getElementById('volunteerEmail').value;
-      const helpText = document.getElementById('volunteerHelp').value;
-      
-      // Generate email content
-      const subject = 'New Volunteer Interest - Poona Panjarpole Trust';
-      const body = `Dear Poona Panjarpole Trust Team,
-
-I hope this email finds you well. I am writing to express my interest in volunteering with your esteemed organization.
-
-Name: ${name}
-Email: ${email}
-
-I would like to contribute in the following way:
-${helpText}
-
-I am excited about the opportunity to work with Poona Panjarpole Trust and contribute to your noble cause of animal welfare. I look forward to hearing from you about how I can best serve the organization.
-
-Thank you for considering my application.
-
-Best regards,
-${name}`;
-
-      // Create Gmail URL with pre-filled content
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=punepanjarpoltrust1855@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Open Gmail in a new tab
-      window.open(gmailUrl, '_blank');
-    });
-  </script>
-</body>
-</html>
+{
+  "en": {
+    "title": "POONA PANJARPOLE TRUST",
+    "about_title": "About Us",
+    "about_text": "The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle. Our mission is to create a compassionate environment where every animal is treated with dignity and respect. We are committed to sustainable cattle farming and community welfare, blending tradition with modern care.",
+    "mission_title": "Our Mission",
+    "mission_text": "To create a sustainable and sacred environment for the welfare of cows and humanity. We strive to promote ethical cattle farming, educate the community, and inspire compassion for all living beings. Our trust is dedicated to providing lifelong care, medical support, and a loving home for every animal in need.",
+    "gallery_title": "Gallery",
+    "contact_title": "Contact Us",
+    "contact_text": "Phone: 8999158881 (WhatsApp available)<br> Email: punepanjarpoltrust1855@gmail.com<br>Address: Pune-Nashik Highway, Bhosari, Pune – 411039",
+    "satellite_view_title": "3D Satellite View",
+    "footer": "© 2025 POONA PANJARPOLE TRUST. All Rights Reserved.",
+    "support_title": "Support Us : DONATE FOR THE FUTURE OF COWS",
+    "support_text": "Your donations help us feed and care for 2200+ cattle. Every rupee counts!",
+    "products-title": "Products for Sale",
+    "sno": "S.No.",
+    "s1": "1",
+    "s2": "2",
+    "s3": "3",
+    "s4": "4",
+    "s5": "5",
+    "s6": "6",
+    "s7": "7",
+    "s8": "8",
+    "s9": "9",
+    "product": "Product",
+    "price": "Price",
+    "ghee": "Ghee",
+    "price-ghee":"2,000/L",
+    "buttermilk": "Buttermilk",
+    "price-buttermilk": "20/L",
+    "biological-letter(jaivik-khat)": "Organic Fertilizer",
+    "price-biological-letter": "20/Kg",
+    "vermi-compost(gandul-khat)": "Cow Dung Fertilizer",
+    "price-vermi-compost": "25/Kg",
+    "vermiwash(vermi-wash)": "Vermiwash",
+    "price-vermiwash": "60/L",
+    "dashparni-ark": "Dashparni Ark",
+    "price-dashparni-ark": "120/L",
+    "gomutra": "Gomutra",
+    "price-gomutra": "30/L",
+    "gokrupamrit": "Gokrupamrit",
+    "price-gokrupamrit": "30/L",
+    "cow-dung-cake": "Cow Dung Cake",
+    "price-cow-dung-cake": "5/Piece",
+    "products_note": "*All the aforementioned products are available solely through offline purchase at our sacred premises",
+    "treatment_title": "Treatment Options",
+    "treatment_text": "Here are some treatment options available for cattle:",
+    "vaccination": "Vaccination against common diseases",
+    "health_checkups": "Regular health check-ups",
+    "parasite_control": "Parasite control and deworming",
+    "nutritional_support": "Nutritional support and supplements",
+    "emergency_care": "Emergency care for injuries",
+    "veterinary_consultations": "Veterinary consultations",
+    "meet_cattle_title": "Meet Our Cattle",
+    "cattle_lakshmi_name": "Lakshmi",
+    "cattle_lakshmi_desc": "Rescued in 2021, Lakshmi is gentle and loves fresh grass.",
+    "cattle_gopal_name": "Gopal",
+    "cattle_gopal_desc": "Known for his playful nature, Gopal enjoys sunny afternoons.",
+    "cattle_radha_name": "Radha",
+    "cattle_radha_desc": "Radha is a survivor and a favorite among our volunteers.",
+    "testimonials_title": "Testimonials",
+    "testimonial_1": "The trust is doing amazing work for animal welfare. I was moved by the care and love shown to every animal.",
+    "testimonial_1_author": "- Aarti, Volunteer",
+    "testimonial_2": "Donating to Poona Panjarpole Trust was the best decision. I can see the impact of my contribution.",
+    "testimonial_2_author": "- Rajesh, Donor",
+    "volunteer_title": "Volunteer / Join Us",
+    "volunteer_text": "We welcome volunteers and supporters! Whether you want to help with daily care, organize events, or spread awareness, your contribution matters. <br> <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Volunteer Inquiry\">Email us to join</a> or visit us to learn more.",
+    "volunteer_form_name": "Your Name",
+    "volunteer_form_email": "Your Email",
+    "volunteer_form_help": "How would you like to help?",
+    "volunteer_form_submit": "Submit",
+    "newsletter_label": "Subscribe to our newsletter:",
+    "newsletter_placeholder": "Your email",
+    "newsletter_submit": "Subscribe",
+    "treatment_vaccination_title": "Vaccination",
+    "treatment_vaccination_desc": "Protection against common cattle diseases through regular vaccination drives.",
+    "treatment_health_title": "Health Check-ups",
+    "treatment_health_desc": "Routine health assessments to ensure early detection and prevention of illness.",
+    "treatment_parasite_title": "Parasite Control",
+    "treatment_parasite_desc": "Scheduled deworming and parasite management for healthy cattle.",
+    "treatment_nutrition_title": "Nutritional Support",
+    "treatment_nutrition_desc": "Balanced diet plans and supplements for optimal cattle health and productivity.",
+    "treatment_emergency_title": "Emergency Care",
+    "treatment_emergency_desc": "Immediate response and care for injuries or sudden illnesses.",
+    "treatment_vetconsult_title": "Veterinary Consultations",
+    "treatment_vetconsult_desc": "Expert advice and treatment from experienced veterinarians.",
+    "vets_title": "Meet Our Veterinarians",
+    "vet1_name": "Dr. Meera Sharma",
+    "vet1_desc": "Chief Veterinarian with 15+ years of experience in cattle health and welfare.",
+    "vet2_name": "Dr. Anil Patil",
+    "vet2_desc": "Specialist in emergency care and preventive medicine for large animals.",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "How often should cattle be vaccinated?",
+    "faq_a1": "Vaccination schedules depend on age and health, but generally, annual boosters are recommended.",
+    "faq_q2": "What should I do if my cow is sick?",
+    "faq_a2": "Contact a veterinarian immediately. Early intervention is crucial for recovery.",
+    "faq_q3": "How can I support cattle health at home?",
+    "faq_a3": "Provide clean water, balanced nutrition, regular deworming, and a clean environment.",
+    "cta_title": "Need Help? Contact Us!",
+    "cta_text": "If your cattle need medical attention or you have questions about animal health, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">email us</a> or call <strong>8999158881</strong> (WhatsApp available).",
+    "nav_about": "About Us",
+    "nav_mission": "Our Mission",
+    "nav_gallery": "Gallery",
+    "nav_products": "Products for Sale",
+    "nav_support": "Support Us",
+    "nav_volunteer": "Volunteer",
+    "nav_contact": "Contact Us",
+    "nav_satellite": "3D Satellite View",
+    "nav_treatment": "Treatment Options",
+    "nav_home": "Home"
+  },
+  "hi": {
+    "title": "पूना पंजरपोल ट्रस्ट",
+    "about_title": "हमारे बारे में",
+    "about_text": "१८५५ में स्थापित पूना पंजरपोल ट्रस्ट २२०० से ज़्यादा मवेशियों के लिए एक अभयारण्य है। भोसरी में स्थित यह ट्रस्ट परित्यक्त और बूढ़े मवेशियों को आश्रय, भोजन और चिकित्सा सेवा प्रदान करता है। हमारा मिशन एक ऐसा दयालु वातावरण बनाना है जहाँ हर जानवर के साथ सम्मान और गरिमा के साथ व्यवहार किया जाए। हम परंपरा को आधुनिक देखभाल के साथ मिलाकर टिकाऊ मवेशी पालन और सामुदायिक कल्याण के लिए प्रतिबद्ध हैं।",
+    "mission_title": "हमारा मिशन",
+    "mission_text": "गायों और मानवता के कल्याण के लिए एक स्थायी और पवित्र वातावरण बनाना। हम नैतिक पशुपालन को बढ़ावा देने, समुदाय को शिक्षित करने और सभी जीवित प्राणियों के लिए करुणा को प्रेरित करने का प्रयास करते हैं। हमारा ट्रस्ट हर ज़रूरतमंद जानवर को आजीवन देखभाल, चिकित्सा सहायता और एक प्यार भरा घर प्रदान करने के लिए समर्पित है।",
+    "gallery_title": "गैलरी",
+    "contact_title": "संपर्क करें",
+    "contact_text": "फ़ोन: ८९९९१५८८८१ (व्हाट्सएप उपलब्ध)<br> ईमेल: punepanjarpoltrust1855@gmail.com<br>पता: पुणे-नासिक हाईवे, भोसरी, पुणे – ४११०३९",
+    "satellite_view_title": "3D सैटेलाइट दृश्य",
+    "footer": "© २०२५ पूना पंजरपोल ट्रस्ट। सर्वाधिकार सुरक्षित।",
+    "support_title": "हमें सहायता करें : गायों के भविष्य के लिए दान करें",
+    "support_text": "आपके दान से हमें २२००+ मवेशियों की देखभाल और भोजन करने में मदद मिलती है। हर रुपया मायने रखता है!",
+    "products-title": "बिक्री के लिए उत्पाद",
+    "sno": "क्रमांक",
+    "s1": "१",
+    "s2": "२",
+    "s3": "३",
+    "s4": "४",
+    "s5": "५",
+    "s6": "६",
+    "s7": "७",
+    "s8": "८",
+    "s9": "९",
+    "product": "उत्पाद",
+    "price": "कीमत",
+    "ghee": "घी",
+    "price-ghee":"२०००/ली",
+    "buttermilk": "छाछ",
+    "price-buttermilk": "२०/ली",
+    "biological-letter(jaivik-khat)": "जैविक खाद",
+    "price-biological-letter": "२०/कि.ग्रा",
+    "vermi-compost(gandul-khat)": "वर्मी कम्पोस्ट(केंचुआ खाद)",
+    "price-vermi-compost": "२५/कि.ग्रा",
+    "vermiwash(vermi-wash)": "वर्मीवॉश",
+    "price-vermiwash": "६०/ली",
+    "dashparni-ark": "दशपर्णी अर्क",
+    "price-dashparni-ark": "१२०/ली",
+    "gomutra": "गोमूत्र",
+    "price-gomutra": "३०/ली",
+    "gokrupamrit": "गोकृपामृत",
+    "price-gokrupamrit": "३०/ली",
+    "cow-dung-cake": "उपला",
+    "price-cow-dung-cake": "५/नग",
+    "products_note":"* उपरोक्त सभी उत्पाद हमारे पवित्र परिसर में केवल ऑफलाइन खरीद के माध्यम से उपलब्ध हैं।",
+    "treatment_title": "उपचार विकल्प",
+    "treatment_text": "यहाँ मवेशियों के लिए कुछ उपचार विकल्प दिए गए हैं:",
+    "vaccination": "सामान्य बीमारियों के खिलाफ टीकाकरण",
+    "health_checkups": "नियमित स्वास्थ्य जांच",
+    "parasite_control": "परजीवी नियंत्रण और कीड़े मारना",
+    "nutritional_support": "पोषण समर्थन और पूरक",
+    "emergency_care": "चोटों के लिए आपातकालीन देखभाल",
+    "veterinary_consultations": "पशु चिकित्सा परामर्श",
+    "meet_cattle_title": "हमारे पशु",
+    "cattle_lakshmi_name": "लक्ष्मी",
+    "cattle_lakshmi_desc": "२०२१ में बचाई गई, लक्ष्मी शांत स्वभाव की है और ताजा घास पसंद करती है।",
+    "cattle_gopal_name": "गोपाल",
+    "cattle_gopal_desc": "अपने चंचल स्वभाव के लिए प्रसिद्ध, गोपाल को धूप में रहना पसंद है।",
+    "cattle_radha_name": "राधा",
+    "cattle_radha_desc": "राधा एक सर्वाइवर है और स्वयंसेवकों की पसंदीदा है।",
+    "testimonials_title": "प्रशंसापत्र",
+    "testimonial_1": "ट्रस्ट पशु कल्याण के लिए अद्भुत कार्य कर रहा है। हर जानवर के लिए देखभाल और प्यार देखकर मैं भावुक हो गई।",
+    "testimonial_1_author": "- आरती, स्वयंसेवक",
+    "testimonial_2": "पूना पंजरपोल ट्रस्ट को दान देना सबसे अच्छा निर्णय था। माझ्या योगदानाचा परिणाम मी पाहू शकतो.",
+    "testimonial_2_author": "- राजेश, दाता",
+    "volunteer_title": "स्वयंसेवक / हमारे साथ जुड़ें",
+    "volunteer_text": "हम स्वयंसेवकों और समर्थकों का स्वागत करते हैं! आप दैनिक देखभाल, कार्यक्रम आयोजित करने या जागरूकता फैलाने में मदद कर सकते हैं। <br> <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Volunteer Inquiry\">ईमेल करें</a> या अधिक जानने के लिए पधारें।",
+    "volunteer_form_name": "आपका नाम",
+    "volunteer_form_email": "आपका ईमेल",
+    "volunteer_form_help": "आप किस प्रकार मदद करना चाहेंगे?",
+    "volunteer_form_submit": "जमा करें",
+    "newsletter_label": "हमारे न्यूज़लेटर के लिए सब्सक्राइब करें:",
+    "newsletter_placeholder": "आपका ईमेल",
+    "newsletter_submit": "सब्सक्राइब करें",
+    "treatment_vaccination_title": "टीकाकरण",
+    "treatment_vaccination_desc": "नियमित टीकाकरण से सामान्य बीमारियों से सुरक्षा।",
+    "treatment_health_title": "स्वास्थ्य जांच",
+    "treatment_health_desc": "बीमारियों की शीघ्र पहचान और रोकथाम के लिए नियमित स्वास्थ्य जांच।",
+    "treatment_parasite_title": "परजीवी नियंत्रण",
+    "treatment_parasite_desc": "स्वस्थ पशुओं के लिए निर्धारित कीड़े मारना और परजीवी नियंत्रण।",
+    "treatment_nutrition_title": "पोषण समर्थन",
+    "treatment_nutrition_desc": "संतुलित आहार और पूरक से पशुओं का स्वास्थ्य और उत्पादकता बढ़ाएं।",
+    "treatment_emergency_title": "आपातकालीन देखभाल",
+    "treatment_emergency_desc": "चोट या अचानक बीमारी के लिए त्वरित देखभाल।",
+    "treatment_vetconsult_title": "पशु चिकित्सा परामर्श",
+    "treatment_vetconsult_desc": "अनुभवी पशु चिकित्सकों से सलाह और उपचार।",
+    "vets_title": "हमारे पशु चिकित्सक",
+    "vet1_name": "डॉ. मीरा शर्मा",
+    "vet1_desc": "१५+ वर्षों के अनुभव वाली मुख्य पशु चिकित्सक।",
+    "vet2_name": "डॉ. अनिल पाटिल",
+    "vet2_desc": "आपातकालीन देखभाल और निवारक चिकित्सा विशेषज्ञ।",
+    "faq_title": "अक्सर पूछे जाने वाले प्रश्न",
+    "faq_q1": "पशुओं का टीकाकरण कितनी बार करना चाहिए?",
+    "faq_a1": "आयु और स्वास्थ्य के अनुसार, आमतौर पर वार्षिक बूस्टर की सलाह दी जाती है।",
+    "faq_q2": "अगर मेरी गाय बीमार है तो क्या करें?",
+    "faq_a2": "तुरंत पशु चिकित्सक से संपर्क करें। शीघ्र हस्तक्षेप आवश्यक है।",
+    "faq_q3": "घर पर पशु स्वास्थ्य कैसे बनाए रखें?",
+    "faq_a3": "स्वच्छ पानी, संतुलित आहार, नियमित कीड़े मारना और स्वच्छ वातावरण दें।",
+    "cta_title": "मदद चाहिए? संपर्क करें!",
+    "cta_text": "अगर आपके पशु को चिकित्सा सहायता चाहिए या कोई सवाल है, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करें</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करें।",
+    "nav_about": "हमारे बारे में",
+    "nav_mission": "हमारा मिशन",
+    "nav_gallery": "गैलरी",
+    "nav_products": "बिक्री के लिए उत्पाद",
+    "nav_support": "हमें सहयोग करें",
+    "nav_volunteer": "स्वयंसेवक",
+    "nav_contact": "संपर्क करें",
+    "nav_satellite": "3डी उपग्रह दृश्य",
+    "nav_treatment": "उपचार विकल्प",
+    "nav_home": "होम"
+  },
+  "mr": {
+    "title": "पुणे पांजरपोळ ट्रस्ट",
+    "about_title": "आमच्याबद्दल",
+    "about_text": "१८५५ मध्ये स्थापन झालेला पुणे पांजरपोळ ट्रस्ट हा २२०० हून अधिक गुरांसाठी एक अभयारण्य आहे. भोसरी येथे स्थित, ट्रस्ट सोडून दिलेल्या आणि वृद्ध गुरांना निवारा, अन्न आणि वैद्यकीय सेवा प्रदान करतो. आमचे ध्येय असे दयाळू वातावरण निर्माण करणे आहे जिथे प्रत्येक प्राण्याला सन्मानाने आणि आदराने वागवले जाईल. आम्ही शाश्वत पशुपालन आणि समुदाय कल्याणासाठी वचनबद्ध आहोत, परंपरा आणि आधुनिक काळजी यांचे मिश्रण करतो.",
+    "mission_title": "आमचे ध्येय",
+    "mission_text": "गायी आणि मानवतेच्या कल्याणासाठी शाश्वत आणि पवित्र वातावरण निर्माण करणे. आम्ही नैतिक पशुपालनाला प्रोत्साहन देण्यासाठी, समुदायाला शिक्षित करण्यासाठी आणि सर्व सजीव प्राण्यांसाठी करुणा निर्माण करण्यासाठी प्रयत्नशील आहोत. आमचा ट्रस्ट जीवनभर काळजी, वैद्यकीय मदत आणि गरजू प्रत्येक प्राण्यासाठी एक प्रेमळ घर प्रदान करण्यासाठी समर्पित आहे.",
+    "gallery_title": "गॅलरी",
+    "contact_title": "संपर्क करा",
+    "contact_text": "फ़ोन: ८९९९१५८८८१ (व्हाट्सएप उपलब्ध)<br> ईमेल: punepanjarpoltrust1855@gmail.com<br>पत्ता: पुणे-नासिक हाईवे, भोसरी, पुणे – ४११०३९",
+    "satellite_view_title": "3D उपग्रह दृश्य",
+    "footer": "© २०२५ पुणे पांजरपोळ ट्रस्ट. सर्व हक्क राखीव.",
+    "support_title": "आम्हाला सहाय्य करा : गाईंच्या भविष्यासाठी देणगी द्या",
+    "support_text": "आपल्या देणग्यांमुळे आम्हाला २२००+ जनावरांची काळजी घेता येते. प्रत्येक रुपया महत्त्वाचा आहे!",
+    "products-title": "विक्रीसाठी उत्पादने",
+    "sno": "क्रमांक",
+    "s1": "१",
+    "s2": "२",
+    "s3": "३",
+    "s4": "४",
+    "s5": "५",
+    "s6": "६",
+    "s7": "७",
+    "s8": "८",
+    "s9": "९",
+    "product": "उत्पादन",
+    "price": "किंमत",
+    "ghee": "तूप",
+    "price-ghee":"२०००/ली",
+    "buttermilk": "ताक",
+    "price-buttermilk": "२०/ली",
+    "biological-letter(jaivik-khat)": "जैविक खत",
+    "price-biological-letter":"२०/कि.ग्रा",
+    "vermi-compost(gandul-khat)": "गांडुळ खत",
+    "price-vermi-compost":"२५/कि.ग्रा",
+    "vermiwash(vermi-wash)": "वर्मीवॉश",
+    "price-vermiwash":"६०/ली",
+    "dashparni-ark": "दशपर्णी अर्क",
+    "price-dashparni-ark":"१२०/ली",
+    "gomutra": "गोमूत्र",
+    "price-gomutra": "३०/ली",
+    "gokrupamrit": "गोकृपामृत",
+    "price-gokrupamrit": "३०/ली",
+    "cow-dung-cake": "गौरैया",
+    "price-cow-dung-cake": "५/नग",
+    "products_note":"*वरील सर्व उत्पादने आमच्या पवित्र परिसरात केवळ ऑफलाइन खरेदीद्वारे उपलब्ध आहेत.",
+    "treatment_title": "उपचार पर्याय",
+    "treatment_text": "मवेशींसाठी उपलब्ध असलेल्या काही उपचार पर्याय येथे आहेत:",
+    "vaccination": "सामान्य रोगांपासून लसीकरण",
+    "health_checkups": "नियमित आरोग्य तपासणी",
+    "parasite_control": "नियमित कृमी काढणे आणि परजीवी नियंत्रण।",
+    "nutritional_support": "संतुलित आहार आणि पूरक पदार्थांनी जनावरांचे आरोग्य आणि उत्पादकता वाढवा.",
+    "emergency_care": "आपत्कालीन काळजी",
+    "veterinary_consultations": "पशुवैद्यकीय सल्ला",
+    "meet_cattle_title": "आमची जनावरे",
+    "cattle_lakshmi_name": "लक्ष्मी",
+    "cattle_lakshmi_desc": "२०२१ मध्ये वाचवलेली, लक्ष्मी शांत आणि ताज्या गवताची आवडती आहे.",
+    "cattle_gopal_name": "गोपाल",
+    "cattle_gopal_desc": "खेळकर स्वभावाचा गोपालला उन्हात बसायला आवडते.",
+    "cattle_radha_name": "राधा",
+    "cattle_radha_desc": "राधा एक सर्वायव्हर आहे आणि स्वयंसेवकांची आवडती आहे.",
+    "testimonials_title": "प्रशंसापत्रे",
+    "testimonial_1": "ट्रस्ट जनावरांच्या कल्याणासाठी उत्कृष्ट काम करत आहे. प्रत्येक जनावरावर दाखवलेली काळजी आणि प्रेम पाहून मी भारावून गेले.",
+    "testimonial_1_author": "- आरती, स्वयंसेवक",
+    "testimonial_2": "पुणे पांजरपोळ ट्रस्टला देणगी देणे हा सर्वोत्तम निर्णय होता. माझ्या योगदानाचा परिणाम मी पाहू शकतो.",
+    "testimonial_2_author": "- राजेश, दाता",
+    "volunteer_title": "स्वयंसेवक / आमच्यात सामील व्हा",
+    "volunteer_text": "आम्ही स्वयंसेवक आणि समर्थकांचे स्वागत करतो! तुम्ही दैनंदिन देखभाल, कार्यक्रम आयोजित करणे किंवा जनजागृती करण्यात मदत करू शकता. <br> <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Volunteer Inquiry\">ईमेल करा</a> किंवा अधिक जाणून घेण्यासाठी भेट द्या.",
+    "volunteer_form_name": "तुमचे नाव",
+    "volunteer_form_email": "तुमचा ईमेल",
+    "volunteer_form_help": "तुम्ही कशी मदत करू इच्छिता?",
+    "volunteer_form_submit": "सबमिट करा",
+    "newsletter_label": "आमच्या वृत्तपत्रासाठी सदस्यता घ्या:",
+    "newsletter_placeholder": "तुमचा ईमेल",
+    "newsletter_submit": "सदस्यता घ्या",
+    "treatment_vaccination_title": "लसीकरण",
+    "treatment_vaccination_desc": "नियमित लसीकरणाने सामान्य रोगांपासून संरक्षण.",
+    "treatment_health_title": "आरोग्य तपासणी",
+    "treatment_health_desc": "रोगांची लवकर ओळख आणि प्रतिबंधासाठी नियमित तपासणी.",
+    "treatment_parasite_title": "परजीवी नियंत्रण",
+    "treatment_parasite_desc": "नियमित कृमी काढणे आणि परजीवी नियंत्रण.",
+    "treatment_nutrition_title": "पोषण समर्थन",
+    "treatment_nutrition_desc": "संतुलित आहार आणि पूरक पदार्थांनी जनावरांचे आरोग्य आणि उत्पादकता वाढवा.",
+    "treatment_emergency_title": "आपत्कालीन काळजी",
+    "treatment_emergency_desc": "जखमा किंवा अचानक आजारासाठी त्वरित काळजी.",
+    "treatment_vetconsult_title": "पशुवैद्यकीय सल्ला",
+    "treatment_vetconsult_desc": "अनुभवी पशुवैद्यकांकडून सल्ला आणि उपचार.",
+    "vets_title": "आमचे पशुवैद्यक",
+    "vet1_name": "डॉ. मीरा शर्मा",
+    "vet1_desc": "१५+ वर्षांचा अनुभव असलेली मुख्य पशुवैद्यक.",
+    "vet2_name": "डॉ. अनिल पाटील",
+    "vet2_desc": "आपत्कालीन काळजी आणि प्रतिबंधात्मक औषधतज्ज्ञ.",
+    "faq_title": "नेहमी विचारले जाणारे प्रश्न",
+    "faq_q1": "जनावरांचे लसीकरण किती वेळा करावे?",
+    "faq_a1": "वय आणि आरोग्यानुसार, सामान्यतः वार्षिक बूस्टरची शिफारस केली जाते.",
+    "faq_q2": "माझ्या गायीला आजार झाला तर काय करावे?",
+    "faq_a2": "ताबडतोब पशुवैद्यकांशी संपर्क साधा. लवकर हस्तक्षेप आवश्यक आहे.",
+    "faq_q3": "घरच्या घरी जनावरांचे आरोग्य कसे राखावे?",
+    "faq_a3": "स्वच्छ पाणी, संतुलित आहार, नियमित कृमी काढणे आणि स्वच्छता ठेवा.",
+    "cta_title": "मदतीसाठी संपर्क करा!",
+    "cta_text": "तुमच्या जनावरांना वैद्यकीय मदतीची गरज असल्यास किंवा प्रश्न असल्यास, <a href=\"mailto:punepanjarpoltrust1855@gmail.com?subject=Veterinary Help\">ईमेल करा</a> किंवा <strong>8999158881</strong> (WhatsApp उपलब्ध) वर कॉल करा.",
+    "nav_about": "आमच्याबद्दल",
+    "nav_mission": "आमचे ध्येय",
+    "nav_gallery": "गॅलरी",
+    "nav_products": "विक्रीसाठी उत्पादने",
+    "nav_support": "आम्हाला सहाय्य करा",
+    "nav_volunteer": "स्वयंसेवक",
+    "nav_contact": "संपर्क साधा",
+    "nav_satellite": "3डी उपग्रह दृश्य",
+    "nav_treatment": "उपचार पर्याय",
+    "nav_home": "मुख्यपृष्ठ"
+  }
+}
