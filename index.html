@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poona Panjarpole Trust</title>
+  <title>Poona Panjarpol Trust</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -25,41 +25,52 @@
     <span class="fadein-namaste">NAMASTE</span>
   </div>
 
-  <div class="lang-container">
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-      <option value="mr">मराठी</option>
-    </select>
-  </div>
-  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
+  
+  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
   <header>
     <div class="header-content">
       <div class="title-row">
         <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
-        <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
+        <h1 data-i18n="title" class="site-title">Poona Panjarpol Trust</h1>
         <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
+        <div class="lang-container">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="second-header">
+    <div class="header-content">
+      <div class="title-row">
+        <nav class="main-nav">
+          <a href="#" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
+          <a href="#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
+          <a href="#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
+          <a href="#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
+          <a href="#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a>
+          <a href="#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
+          <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
+          <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
+          <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
+          <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
+        </nav>
       </div>
     </div>
   </header>
 
   <main>
-    <nav class="floating-nav">
-      <a href="#" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
-      <a href="#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
-      <a href="#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
-      <a href="#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
-      <a href="#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a>
-      <a href="#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
-      <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
-      <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
-      <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
-      <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
-    </nav>
-
     <section id="about">
       <h2 data-i18n="about_title">About Us</h2>
-      <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle. Our mission is to create a compassionate environment where every animal is treated with dignity and respect. We are committed to sustainable cattle farming and community welfare, blending tradition with modern care.</p>
+      <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. 
+                                Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned 
+                                and aging cattle. Our mission is to create a compassionate environment where every 
+                                animal is treated with dignity and respect. We are committed to sustainable cattle 
+                                farming and community welfare, blending tradition with modern care.</p>
     </section>
 
     <section id="mission">
@@ -125,51 +136,150 @@
           <thead>
             <tr>
               <th data-i18n="sno">S.No.</th>
-              <th data-i18n="item">Item</th>
+              <th data-i18n="product">Product</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
+              <td data-i18n="s1">1</td>
               <td data-i18n="ghee">Ghee</td>
             </tr>
             <tr>
-              <td>2</td>
+              <td data-i18n="s2">2</td>
               <td data-i18n="buttermilk">Buttermilk</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td data-i18n="organic-fertilizer">Organic Fertilizer</td>
+              <td data-i18n="s3">3</td>
+              <td data-i18n="biological-letter(jaivik-khat)">Biological Letter (Jaivik Khat)</td>
             </tr>
             <tr>
-              <td>4</td>
-              <td data-i18n="cow-dung-fertilizer">Cow Dung Fertilizer</td>
+              <td data-i18n="s4">4</td>
+              <td data-i18n="vermi-compost(gandul-khat)">Vermi Compost (Gandul Khat)</td>
             </tr>
             <tr>
-              <td>5</td>
-              <td data-i18n="Niramaya">Niramaya</td>
+              <td data-i18n="s5">5</td>
+              <td data-i18n="vermiwash(vermi-wash)">Vermiwash</td>
             </tr>
             <tr>
-              <td>6</td>
-              <td data-i18n="dashparni-ark">Dashparni Ark</td>
+              <td data-i18n="s6">6</td>
+              <td data-i18n="dashparni-ark">Disharine Extract (Darshparni Ark)</td>
             </tr>
             <tr>
-              <td>7</td>
+              <td data-i18n="s7">7</td>
               <td data-i18n="gomutra">Gomutra</td>
             </tr>
             <tr>
-              <td>8</td>
+              <td data-i18n="s8">8</td>
               <td data-i18n="gokrupamrit">Gokrupamrit</td>
             </tr>
             <tr>
-              <td>9</td>
-              <td data-i18n="sparrow">Sparrow</td>
+              <td data-i18n="s9">9</td>
+              <td data-i18n="cow-dung-cake">Cow Dung Cake</td>
             </tr>
           </tbody>
         </table>
+        <p class="products-note" data-i18n="products_note">*All the aforementioned products are available solely through offline purchase at our sacred premises</p>
       </div>
     </section>
     
+    <section id="gau-chalisha" class="gau-chalisha-section">
+      <h2 class="section-title" data-i18n="gau-chalisha-title">गौ चालीसा</h2>
+      <div class="book-container">
+        <div class="book">
+          <div class="page" id="page1">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ दोहा ॥</h3>
+                <p>गऊ हमारी मातु है, हम पाले संतान।<br>
+                गऊ सेवा से मिलेगा, सब सुख संपति खान॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page2">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ चौपाई ॥</h3>
+                <p>जय गऊ माता कृपा तुम्हारी।<br>
+                दूर करो भवसागर भारी॥</p>
+                <p>गऊ ही ब्रह्मा, विष्णु गऊ।<br>
+                गऊ ही शिवरूप समऊ॥</p>
+                <p>गऊ में बास करे सब देव।<br>
+                गऊ सदा करे भव से सेव॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page3">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ चरन धरती पर ध्यानी।<br>
+                गऊ बिना जीवन अज्ञानी॥</p>
+                <p>गऊ दूध अमृत के समाना।<br>
+                जीवन का यह सच्चा खजाना॥</p>
+                <p>गऊ माता की जो सेवा।<br>
+                पावे जीवन में अमिट मेवा॥</p>
+                <p>गऊ को जो ग्रास खिलावे।<br>
+                उसका हर संकट टल जावे॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page4">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ की जो करे पूजा।<br>
+                भवसागर से पावे दूजा॥</p>
+                <p>गऊ रक्षा धर्म महान।<br>
+                गऊ वंश बढ़ावे खान॥</p>
+                <p>गऊ माता करे रखवाली।<br>
+                सदा बनी रहे घर में खुशहाली॥</p>
+                <p>जो करे गऊ माता की सेवा।<br>
+                उसका जीवन होवे मेवा॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page5">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ माता से नाता जोड़ो।<br>
+                अपने जीवन को उजियारा करो॥</p>
+                <p>जो गऊ को मारन धावे।<br>
+                वह नरक कुंड में जावे॥</p>
+                <p>गऊ माता को जो अपनाए।<br>
+                सात जनम सुख पावे॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page6">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ समापन दोहा ॥</h3>
+                <p>गऊ चालीसा जो कोई गावे।<br>
+                भवसागर से पार वो जावे॥</p>
+                <p>गऊ कृपा से जोड़े नाता।<br>
+                सफल हो जीवन, हर दिन पावन भ्राता॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+        </div>
+        <div class="book-controls">
+          <button class="prev-page" onclick="prevPage()">← पिछला पृष्ठ</button>
+          <span class="page-number">पृष्ठ <span id="current-page">1</span> / 6</span>
+          <button class="next-page" onclick="nextPage()">अगला पृष्ठ →</button>
+        </div>
+      </div>
+    </section>
+
     <section id="donate" class="section" data-aos="fade-up">
       <div class="container text-center">
         <h2 data-i18n="support_title">Support Us: Donate for the Future of Cows</h2>
@@ -186,7 +296,7 @@
           <p><strong>IFSC:</strong> DCBL0000014</p>
           <p><strong>UPI ID:</strong> Mswipe.1400041924000711@kotak</p>
         </div>
-        <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="btn btn-success donate-btn">Donate Online</a>
+        <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR" class="btn btn-success donate-btn">Donate Online</a>
       </div>
     </section>
 
@@ -236,17 +346,13 @@
     <div id="narayan-chatbot-window" class="closed">
       <div class="narayan-header">NAARAD <span class="narayan-status">● online</span></div>
       <div id="narayan-chat-messages" class="narayan-messages">
-        
       </div>
-      <form id="narayan-chat-form">
-        <input type="text" id="narayan-chat-input" placeholder="Type your message..." autocomplete="off" required />
-        <button type="submit">Send</button>
-      </form>
     </div>
     <div class="chat-popup">Chat with NAARAD</div>
   </div>
 
   <script src="lang.js"></script>
+  <script src="js/chatgpt-service.js"></script>
   <script src="chatbot.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -285,6 +391,67 @@
           behavior: 'smooth'
         });
       });
+
+      // Initialize Gau Chalisha book
+      let currentPage = 1;
+      const totalPages = 6;
+      const pages = document.querySelectorAll('.page');
+      
+      // Show first page
+      pages[0].classList.add('active');
+      
+      // Update page number display
+      document.getElementById('current-page').textContent = currentPage;
+    });
+
+    // Page turning functions
+    function nextPage() {
+      const pages = document.querySelectorAll('.page');
+      const currentPage = parseInt(document.getElementById('current-page').textContent);
+      
+      if (currentPage < pages.length) {
+        const currentPageElement = pages[currentPage - 1];
+        const nextPageElement = pages[currentPage];
+        
+        // Start turning animation
+        currentPageElement.classList.add('turning');
+        
+        // After animation completes, switch pages
+        setTimeout(() => {
+          currentPageElement.classList.remove('active', 'turning');
+          nextPageElement.classList.add('active');
+          document.getElementById('current-page').textContent = currentPage + 1;
+        }, 500);
+      }
+    }
+
+    function prevPage() {
+      const pages = document.querySelectorAll('.page');
+      const currentPage = parseInt(document.getElementById('current-page').textContent);
+      
+      if (currentPage > 1) {
+        const currentPageElement = pages[currentPage - 1];
+        const prevPageElement = pages[currentPage - 2];
+        
+        // Start turning animation
+        currentPageElement.classList.add('turning');
+        
+        // After animation completes, switch pages
+        setTimeout(() => {
+          currentPageElement.classList.remove('active', 'turning');
+          prevPageElement.classList.add('active');
+          document.getElementById('current-page').textContent = currentPage - 1;
+        }, 500);
+      }
+    }
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') {
+        nextPage();
+      } else if (e.key === 'ArrowLeft') {
+        prevPage();
+      }
     });
 
     document.getElementById('volunteerForm').addEventListener('submit', function(e) {
@@ -322,3 +489,4 @@ ${name}`;
   </script>
 </body>
 </html>
+
