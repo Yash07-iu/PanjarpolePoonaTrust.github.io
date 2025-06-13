@@ -2,8 +2,6 @@
 (function() {
   const btn = document.getElementById('narayan-chatbot-btn');
   const windowEl = document.getElementById('narayan-chatbot-window');
-  const form = document.getElementById('narayan-chat-form');
-  const input = document.getElementById('narayan-chat-input');
   const messages = document.getElementById('narayan-chat-messages');
   const chatPopup = document.querySelector('.chat-popup');
 
@@ -13,68 +11,87 @@
 
   const botTexts = {
     en: {
-      greet: "Hello! I am NAARAD, your assistant. How can I help you today? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>About Us</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Donate</button><button class='narayan-nav-btn' data-section='contact'>Contact</button><button class='narayan-nav-btn' data-section='volunteer'>Volunteer</button><button class='narayan-nav-btn' data-section='products'>Products</button><button class='narayan-nav-btn' data-section='treatment'>Treatment Options</button></div><br><b>NARAYAN...NARAYAN...</b>",
-      options: "Please select from the options below:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>About Us</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Donate</button><button class='narayan-nav-btn' data-section='contact'>Contact</button><button class='narayan-nav-btn' data-section='volunteer'>Volunteer</button><button class='narayan-nav-btn' data-section='products'>Products</button><button class='narayan-nav-btn' data-section='treatment'>Treatment Options</button></div>",
-      about: 'You can learn about our trust in the About Us section. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Go to About Us</a>.',
-      gallery: 'See our cattle and activities in the Gallery. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Gallery</a>.',
-      donate: 'Support us by donating! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Donate</a>.',
-      contact: 'Contact us for any queries. <a href="#contact" onclick="document.getElementById(\'contact\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Contact</a>.',
-      volunteer: 'Join us as a volunteer! <a href="#volunteer" onclick="document.getElementById(\'volunteer\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Volunteer</a>.',
-      products: 'Check out our products for sale. <a href="#products" onclick="document.getElementById(\'products\').scrollIntoView({behavior: \'smooth\'});return false;">Go to Products</a>.',
-      treatment: 'See our cattle treatment options. <a href="treatment-options.html">Go to Treatment Options</a>.',
-      language: 'Please choose a language: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button> <button class="narayan-lang-btn" data-lang="hi-latin">Hinglish</button>',
-      setlang: 'Language set to: '
+      greet: "Hello! I am NAARAD, your AI assistant. Please select a question to learn more about our trust:",
+      language: 'Please choose a language: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button>',
+      setlang: 'Language set to: ',
+      questions: [
+        {
+          q: "What is Poona Panjarpole Trust?",
+          a: "Poona Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, we provide shelter, food, and medical care to abandoned and aging cattle."
+        },
+        {
+          q: "How can I donate?",
+          a: "You can donate through our UPI ID: Mswipe.1400041924000711@kotak or visit our donation section for bank details. Every contribution helps us care for our cattle."
+        },
+        {
+          q: "What products do you sell?",
+          a: "We sell various products including Ghee (₹2,000/L), Buttermilk (₹20/L), Biological Letter (₹20/Kg), Vermi Compost (₹25/Kg), Vermiwash (₹60/L), and more. Visit our Products section for details."
+        },
+        {
+          q: "How can I volunteer?",
+          a: "You can volunteer by filling out the form in our Volunteer section. We welcome help with daily care, event organization, and spreading awareness about our cause."
+        },
+        {
+          q: "Where are you located?",
+          a: "We are located at Pune-Nashik Highway, Bhosari, Pune – 411039. You can find our exact location in the Contact Us section with a map."
+        }
+      ]
     },
     hi: {
-      greet: "नमस्ते! मैं नारद हूँ, आपकी सहायता के लिए। आप क्या जानना चाहते हैं? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>हमारे बारे में</button><button class='narayan-nav-btn' data-section='gallery'>गैलरी</button><button class='narayan-nav-btn' data-section='donate'>दान</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पाद</button><button class='narayan-nav-btn' data-section='treatment'>उपचार विकल्प</button></div><br><b>नारायण...नारायण...</b>",
-      options: "कृपया नीचे दिए गए विकल्पों में से चुनें:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>हमारे बारे में</button><button class='narayan-nav-btn' data-section='gallery'>गैलरी</button><button class='narayan-nav-btn' data-section='donate'>दान</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पाद</button><button class='narayan-nav-btn' data-section='treatment'>उपचार विकल्प</button></div>",
-      about: 'हमारे बारे में अनुभाग में ट्रस्ट के बारे में जानें। <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      gallery: 'गैलरी में हमारे पशु और गतिविधियाँ देखें। <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      donate: 'दान करके हमारा समर्थन करें! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      contact: 'किसी भी प्रश्न के लिए संपर्क करें। <a href="#contact" onclick="document.getElementById(\'contact\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      volunteer: 'स्वयंसेवक के रूप में जुड़ें! <a href="#volunteer" onclick="document.getElementById(\'volunteer\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      products: 'हमारे बिक्री के उत्पाद देखें। <a href="#products" onclick="document.getElementById(\'products\').scrollIntoView({behavior: \'smooth\'});return false;">यहाँ जाएं</a>.',
-      treatment: 'हमारे पशु उपचार विकल्प देखें। <a href="treatment-options.html">यहाँ जाएं</a>.',
-      language: 'कृपया भाषा चुनें: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button> <button class="narayan-lang-btn" data-lang="hi-latin">Hinglish</button>',
-      setlang: 'भाषा सेट की गई: '
+      greet: "नमस्ते! मैं NAARAD हूं, आपकी AI सहायक। कृपया हमारे ट्रस्ट के बारे में अधिक जानने के लिए एक प्रश्न चुनें:",
+      language: 'कृपया भाषा चुनें: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button>',
+      setlang: 'भाषा सेट की गई: ',
+      questions: [
+        {
+          q: "पूना पंजरपोल ट्रस्ट क्या है?",
+          a: "पूना पंजरपोल ट्रस्ट, 1855 में स्थापित, 2,200 से अधिक पशुओं के लिए एक आश्रय स्थल है। भोसरी में स्थित, हम परित्यक्त और वृद्ध पशुओं को आश्रय, भोजन और चिकित्सा देखभाल प्रदान करते हैं।"
+        },
+        {
+          q: "मैं दान कैसे कर सकता हूं?",
+          a: "आप हमारे UPI ID: Mswipe.1400041924000711@kotak के माध्यम से दान कर सकते हैं या बैंक विवरण के लिए हमारे दान खंड पर जा सकते हैं। हर योगदान हमारे पशुओं की देखभाल में मदद करता है।"
+        },
+        {
+          q: "आप कौन से उत्पाद बेचते हैं?",
+          a: "हम विभिन्न उत्पाद बेचते हैं जिनमें घी (₹2,000/ली), छाछ (₹20/ली), जैविक खाद (₹20/किलो), वर्मी कम्पोस्ट (₹25/किलो), वर्मीवाश (₹60/ली) और अधिक शामिल हैं। विवरण के लिए हमारे उत्पाद खंड पर जाएं।"
+        },
+        {
+          q: "मैं स्वयंसेवक कैसे बन सकता हूं?",
+          a: "आप हमारे स्वयंसेवक खंड में फॉर्म भरकर स्वयंसेवक बन सकते हैं। हम दैनिक देखभाल, कार्यक्रम आयोजन और हमारे कारण के बारे में जागरूकता फैलाने में मदद का स्वागत करते हैं।"
+        },
+        {
+          q: "आप कहाँ स्थित हैं?",
+          a: "हम पुणे-नाशिक हाईवे, भोसरी, पुणे - 411039 पर स्थित हैं। आप हमारा सटीक स्थान संपर्क खंड में नक्शे के साथ पा सकते हैं।"
+        }
+      ]
     },
     mr: {
-      greet: "नमस्कार! मी नारद, तुमची मदत करण्यासाठी येथे आहे. तुम्हाला कशाबद्दल माहिती हवी आहे? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>आमच्याबद्दल</button><button class='narayan-nav-btn' data-section='gallery'>गॅलरी</button><button class='narayan-nav-btn' data-section='donate'>देणगी</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पादने</button><button class='narayan-nav-btn' data-section='treatment'>उपचार पर्याय</button></div><br><b>नारायण...नारायण...</b>",
-      options: "कृपया खालील पर्यायांमधून निवडा:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>आमच्याबद्दल</button><button class='narayan-nav-btn' data-section='gallery'>गॅलरी</button><button class='narayan-nav-btn' data-section='donate'>देणगी</button><button class='narayan-nav-btn' data-section='contact'>संपर्क</button><button class='narayan-nav-btn' data-section='volunteer'>स्वयंसेवक</button><button class='narayan-nav-btn' data-section='products'>उत्पादने</button><button class='narayan-nav-btn' data-section='treatment'>उपचार पर्याय</button></div>",
-      about: 'आमच्याबद्दल विभागात ट्रस्टबद्दल जाणून घ्या. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      gallery: 'गॅलरीमध्ये आमची जनावरे आणि उपक्रम पहा. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      donate: 'आम्हाला देणगी देऊन समर्थन करा! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      contact: 'कोणत्याही प्रश्नासाठी संपर्क करा. <a href="#contact" onclick="document.getElementById(\'contact\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      volunteer: 'स्वयंसेवक म्हणून सामील व्हा! <a href="#volunteer" onclick="document.getElementById(\'volunteer\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      products: 'आमची विक्रीसाठी उत्पादने पहा. <a href="#products" onclick="document.getElementById(\'products\').scrollIntoView({behavior: \'smooth\'});return false;">येथे जा</a>.',
-      treatment: 'आमचे जनावरांचे उपचार पर्याय पहा. <a href="treatment-options.html">येथे जा</a>.',
-      language: 'कृपया भाषा निवडा: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button> <button class="narayan-lang-btn" data-lang="hi-latin">Hinglish</button>',
-      setlang: 'भाषा निवडली: '
-    },
-    'hi-latin': {
-      greet: "Namaste! Main NAARAD hoon, aapki sahayata ke liye. Aap kya jaanna chahte hain? <br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>Hamare Baare Mein</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Daana</button><button class='narayan-nav-btn' data-section='contact'>Sampark</button><button class='narayan-nav-btn' data-section='volunteer'>Swayamsevak</button><button class='narayan-nav-btn' data-section='products'>Utpad</button><button class='narayan-nav-btn' data-section='treatment'>Upchaar Vikalp</button></div><br><b>NARAYAN...NARAYAN...</b>",
-      options: "Kripya niche diye gaye vikalpon mein se chunein:<br><div class='narayan-buttons'><button class='narayan-nav-btn' data-section='about'>Hamare Baare Mein</button><button class='narayan-nav-btn' data-section='gallery'>Gallery</button><button class='narayan-nav-btn' data-section='donate'>Daana</button><button class='narayan-nav-btn' data-section='contact'>Sampark</button><button class='narayan-nav-btn' data-section='volunteer'>Swayamsevak</button><button class='narayan-nav-btn' data-section='products'>Utpad</button><button class='narayan-nav-btn' data-section='treatment'>Upchaar Vikalp</button></div>",
-      about: 'Hamare baare mein section mein trust ke baare mein jaanein. <a href="#about" onclick="document.getElementById(\'about\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      gallery: 'Gallery mein hamare pashu aur gatividhiyan dekhein. <a href="#gallery" onclick="document.getElementById(\'gallery\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      donate: 'Daana karke hamara samarthan karein! <a href="#donate" onclick="document.getElementById(\'donate\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      contact: 'Kisi bhi prashn ke liye sampark karein. <a href="#contact" onclick="document.getElementById(\'contact\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      volunteer: 'Swayamsevak ke roop mein jud jaayein! <a href="#volunteer" onclick="document.getElementById(\'volunteer\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      products: 'Hamare bikri ke utpad dekhein. <a href="#products" onclick="document.getElementById(\'products\').scrollIntoView({behavior: \'smooth\'});return false;">Yahan jaayein</a>.',
-      treatment: 'Hamare pashuon ke upchaar vikalp dekhein. <a href="treatment-options.html">Yahan jaayein</a>.',
-      language: 'Kripya bhasha chunein: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button> <button class="narayan-lang-btn" data-lang="hi-latin">Hinglish</button>',
-      setlang: 'Bhasha set ki gayi: '
+      greet: "नमस्कार! मी NAARAD आहे, तुमची AI सहाय्यक. कृपया आमच्या ट्रस्टबद्दल अधिक जाणून घेण्यासाठी एक प्रश्न निवडा:",
+      language: 'कृपया भाषा निवडा: <button class="narayan-lang-btn" data-lang="en">English</button> <button class="narayan-lang-btn" data-lang="hi">हिन्दी</button> <button class="narayan-lang-btn" data-lang="mr">मराठी</button>',
+      setlang: 'भाषा सेट केली: ',
+      questions: [
+        {
+          q: "पूना पंजरपोल ट्रस्ट म्हणजे काय?",
+          a: "पूना पंजरपोल ट्रस्ट, 1855 मध्ये स्थापन केलेले, 2,200 पेक्षा जास्त गुरांसाठी एक आश्रयस्थान आहे. भोसरी येथे स्थित, आम्ही परित्यक्त आणि वृद्ध गुरांना आश्रय, अन्न आणि वैद्यकीय सेवा पुरवतो."
+        },
+        {
+          q: "मी दान कसे करू शकतो?",
+          a: "तुम्ही आमच्या UPI ID: Mswipe.1400041924000711@kotak द्वारे दान करू शकता किंवा बँक तपशीलांसाठी आमच्या दान विभागात जाऊ शकता. प्रत्येक योगदान आमच्या गुरांच्या काळजीत मदत करते."
+        },
+        {
+          q: "तुम्ही कोणते उत्पादने विकता?",
+          a: "आम्ही तूप (₹2,000/ली), छाछ (₹20/ली), जैविक खत (₹20/किलो), वर्मी कम्पोस्ट (₹25/किलो), वर्मीवॉश (₹60/ली) आणि अधिक उत्पादने विकतो. तपशीलांसाठी आमच्या उत्पादन विभागात जा."
+        },
+        {
+          q: "मी स्वयंसेवक कसा बनू शकतो?",
+          a: "तुम्ही आमच्या स्वयंसेवक विभागात फॉर्म भरून स्वयंसेवक बनू शकता. आम्ही दैनंदिन काळजी, कार्यक्रम आयोजन आणि आमच्या कार्याबद्दल जागरूकता पसरवण्यात मदत करण्यास स्वागत करतो."
+        },
+        {
+          q: "तुम्ही कुठे स्थित आहात?",
+          a: "आम्ही पुणे-नाशिक महामार्ग, भोसरी, पुणे - 411039 येथे स्थित आहोत. तुम्ही आमचे अचूक स्थान संपर्क विभागात नकाशासह शोधू शकता."
+        }
+      ]
     }
   };
-
-  // Helper: get narayan phrase for current language
-  function getNarayanPhrase() {
-    switch (narayanLang) {
-      case 'hi': return 'नारायण...नारायण...';
-      case 'mr': return 'नारायण...नारायण...';
-      case 'hi-latin': return 'NARAYAN...NARAYAN...';
-      default: return 'NARAYAN...NARAYAN...';
-    }
-  }
 
   // Add typing indicator
   function addTypingIndicator() {
@@ -93,33 +110,8 @@
     }
   }
 
-  // Add event listeners for navigation buttons
-  function addNavButtonListeners() {
-    document.querySelectorAll('.narayan-nav-btn').forEach(btn => {
-      btn.onclick = function() {
-        const section = this.getAttribute('data-section');
-        if (section === 'treatment') {
-          window.location.href = 'treatment-options.html';
-        } else {
-          // Check if we're on the main page
-          if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
-            const element = document.getElementById(section);
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          } else {
-            // If we're on another page, redirect to the main page with the section
-            window.location.href = 'index.html#' + section;
-          }
-        }
-      };
-    });
-  }
-
-  // Modify addBotMessageWithTyping to add button listeners
+  // Add bot message with typing animation
   async function addBotMessageWithTyping(msg) {
-    const phrase = getNarayanPhrase();
-    const fullMessage = phrase + '<br>' + msg + '<br>' + phrase;
     const typingIndicator = addTypingIndicator();
     
     await new Promise(resolve => setTimeout(resolve, 1500));
@@ -127,18 +119,28 @@
     
     const div = document.createElement('div');
     div.className = 'narayan-message narayan-bot';
-    div.innerHTML = fullMessage;
+    div.innerHTML = msg;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
-    
-    // Add event listeners for language buttons and navigation buttons
+
+    // Add event listeners for language buttons
     div.querySelectorAll('.narayan-lang-btn').forEach(btn => {
       btn.onclick = function() {
         setLanguage(btn.getAttribute('data-lang'), btn.innerText);
       };
     });
-    
-    addNavButtonListeners();
+
+    // Add event listeners for question buttons
+    div.querySelectorAll('.question-btn').forEach(btn => {
+      btn.onclick = function() {
+        const question = btn.getAttribute('data-question');
+        const answer = btn.getAttribute('data-answer');
+        addUserMessage(question);
+        setTimeout(() => {
+          addBotMessageWithTyping(answer);
+        }, 500);
+      };
+    });
   }
 
   // Toggle chat window
@@ -149,39 +151,12 @@
       setTimeout(() => { messages.scrollTop = messages.scrollHeight; }, 100);
       if (!langChosen) {
         showLanguagePrompt();
-      } else if (!messages.querySelector('.narayan-bot')) {
-        addBotMessageWithTyping(botTexts[narayanLang].greet);
+      } else {
+        showQuestions();
       }
     } else {
       chatPopup.style.display = 'block';
     }
-  });
-
-  // Handle form submit
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const userMsg = input.value.trim();
-    if (!userMsg) return;
-    addUserMessage(userMsg);
-    if (!langChosen) {
-      // Try to detect language from user input
-      const m = userMsg.toLowerCase();
-      if (m.includes('english')) {
-        setLanguage('en', 'English');
-      } else if (m.includes('hindi') || m.includes('हिन्दी')) {
-        setLanguage('hi', 'हिन्दी');
-      } else if (m.includes('marathi') || m.includes('मराठी')) {
-        setLanguage('mr', 'मराठी');
-      } else if (m.includes('hinglish')) {
-        setLanguage('hi-latin', 'Hinglish');
-      } else {
-        await addBotMessageWithTyping(botTexts.en.language);
-      }
-      input.value = '';
-      return;
-    }
-    await respondToUser(userMsg);
-    input.value = '';
   });
 
   // Add user message
@@ -197,40 +172,24 @@
     narayanLang = lang;
     langChosen = true;
     await addBotMessageWithTyping(botTexts[narayanLang].setlang + label + '.<br>' + botTexts[narayanLang].greet);
-  }
-
-  // Respond to user
-  async function respondToUser(msg) {
-    const m = msg.toLowerCase();
-    let reply = '';
-    if (m.includes('language') || m.includes('bhasha') || m.includes('भाषा')) {
-      reply = botTexts[narayanLang].language;
-    } else if (m.includes('about')) {
-      reply = botTexts[narayanLang].about;
-    } else if (m.includes('gallery')) {
-      reply = botTexts[narayanLang].gallery;
-    } else if (m.includes('donate') || m.includes('daan') || m.includes('दान')) {
-      reply = botTexts[narayanLang].donate;
-    } else if (m.includes('contact') || m.includes('sampark') || m.includes('संपर्क')) {
-      reply = botTexts[narayanLang].contact;
-    } else if (m.includes('volunteer') || m.includes('swayamsevak') || m.includes('स्वयंसेवक')) {
-      reply = botTexts[narayanLang].volunteer;
-    } else if (m.includes('product') || m.includes('utpad') || m.includes('उत्पाद')) {
-      reply = botTexts[narayanLang].products;
-    } else if (m.includes('treatment') || m.includes('upchaar') || m.includes('उपचार')) {
-      reply = botTexts[narayanLang].treatment;
-    } else if (m.includes('hello') || m.includes('hi') || m.includes('namaste') || m.includes('नमस्ते')) {
-      reply = botTexts[narayanLang].greet;
-    } else {
-      reply = botTexts[narayanLang].options;
-    }
-    await addBotMessageWithTyping(reply);
+    showQuestions();
   }
 
   // Show language selection as first message
   function showLanguagePrompt() {
     messages.innerHTML = '';
-    addBotMessageWithTyping(botTexts.en.language); // Always show in English for prompt
+    addBotMessageWithTyping(botTexts.en.language);
+  }
+
+  // Show questions
+  function showQuestions() {
+    const questions = botTexts[narayanLang].questions;
+    let questionsHtml = '<div class="questions-container">';
+    questions.forEach(q => {
+      questionsHtml += `<button class="question-btn" data-question="${q.q}" data-answer="${q.a}">${q.q}</button>`;
+    });
+    questionsHtml += '</div>';
+    addBotMessageWithTyping(questionsHtml);
   }
 
   // On load, always show language prompt in chat window (if opened)
