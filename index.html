@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -18,6 +19,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .products-table td {
+      color: #000000 !important;  /* Pure black color with !important */
+      font-weight: normal !important;
+    }
+    .products-table td[data-i18n] {
+      color: #000000 !important;  /* Pure black color with !important */
+      font-weight: normal !important;
+    }
+    .products-table td:first-child {
+      color: #000000 !important;  /* Black color for serial numbers */
+      font-weight: normal !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Fade-in overlay -->
@@ -25,46 +41,89 @@
     <span class="fadein-namaste">NAMASTE</span>
   </div>
 
-  <div class="lang-container">
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-      <option value="mr">मराठी</option>
-    </select>
-  </div>
-  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR&am=&tr=&tn=Donation to Poona Panjarpole Trust" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
+  
+  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR&tn=Donation" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
+  <a href="#" class="callnow-sidebar" id="callNowBtn"><img src="media/telephone.png" alt="Call Now" style="width:96px;height:96px;object-fit:contain;display:block;margin:0 auto;"> </a>
   <header>
     <div class="header-content">
       <div class="title-row">
+        <button class="hamburger-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
         <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
         <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
+        <div class="lang-container">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="second-header">
+    <div class="header-content">
+      <div class="title-row">
+        <nav class="main-nav">
+          <a href="#" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
+          <a href="#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
+          <a href="#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
+          <a href="#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
+          <a href="#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a>
+          <a href="#gau-chalisha"><span class="nav-icon">📖</span> <span data-i18n="nav_gau_chalisha">Gau Chalisa</span></a>
+          <a href="#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
+          <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
+          <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
+          <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
+          <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
+        </nav>
       </div>
     </div>
   </header>
 
   <main>
-    <nav class="floating-nav">
-      <a href="#" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
-      <a href="#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
-      <a href="#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
-      <a href="#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
-      <a href="#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a
-      <a href="#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
-      <a href="#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
-      <a href="#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
-      <a href="#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
-      <a href="treatment-options.html"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
-    </nav>
-
     <section id="about">
       <h2 data-i18n="about_title">About Us</h2>
-      <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned and aging cattle. Our mission is to create a compassionate environment where every animal is treated with dignity and respect. We are committed to sustainable cattle farming and community welfare, blending tradition with modern care.</p>
+      <p data-i18n="about_text">The Pune Panjarpole Trust, established in 1855, is a sanctuary for over 2,200 cattle. 
+                                Located in Bhosari, the Trust provides shelter, food, and medical care to abandoned 
+                                and aging cattle. Our mission is to create a compassionate environment where every 
+                                animal is treated with dignity and respect. We are committed to sustainable cattle 
+                                farming and community welfare, blending tradition with modern care.</p>
     </section>
 
     <section id="mission">
       <h2 data-i18n="mission_title">Our Mission</h2>
       <p data-i18n="mission_text">To create a sustainable and sacred environment for the welfare of cows and humanity. We strive to promote ethical cattle farming, educate the community, and inspire compassion for all living beings. Our trust is dedicated to providing lifelong care, medical support, and a loving home for every animal in need.</p>
+    </section>
+
+    <section id="testimonials">
+      <h2 data-i18n="testimonials_title">Testimonials</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p data-i18n="testimonial_1">"The trust is doing amazing work for animal welfare. I was moved by the care and love shown to every animal."</p>
+          <span data-i18n="testimonial_1_author">- Aarti, Volunteer</span>
+        </div>
+        <div class="testimonial">
+          <p data-i18n="testimonial_2">"Donating to Poona Panjarpole Trust was the best decision. I can see the impact of my contribution."</p>
+          <span data-i18n="testimonial_2_author">- Rajesh, Donor</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteer">
+      <h2 data-i18n="volunteer_title">Volunteer / Join Us</h2>
+      <p data-i18n="volunteer_text">We welcome volunteers and supporters! Whether you want to help with daily care, organize events, or spread awareness, your contribution matters.</p>
+      <form class="volunteer-form" id="volunteerForm">
+        <input type="text" id="volunteerName" placeholder="Your Name" required data-i18n-placeholder="volunteer_form_name">
+        <input type="email" id="volunteerEmail" placeholder="Your Email" required data-i18n-placeholder="volunteer_form_email">
+        <textarea id="volunteerHelp" placeholder="How would you like to help?" required data-i18n-placeholder="volunteer_form_help"></textarea>
+        <button type="submit" data-i18n="volunteer_form_submit">Submit</button>
+      </form>
     </section>
 
     <section id="gallery">
@@ -101,44 +160,54 @@
             <tr>
               <th data-i18n="sno">S.No.</th>
               <th data-i18n="product">Product</th>
+              <!-- <th data-i18n="price">Price (₹)</th> -->
             </tr>
           </thead>
           <tbody>
             <tr>
               <td data-i18n="s1">1</td>
               <td data-i18n="ghee">Ghee</td>
+              <!-- <td data-i18n="price-ghee">2,000/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s2">2</td>
               <td data-i18n="buttermilk">Buttermilk</td>
+              <!-- <td data-i18n="price-buttermilk">20/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s3">3</td>
               <td data-i18n="biological-letter(jaivik-khat)">Biological Letter (Jaivik Khat)</td>
+              <!-- <td data-i18n="price-biological-letter">20/Kg</td> -->
             </tr>
             <tr>
               <td data-i18n="s4">4</td>
               <td data-i18n="vermi-compost(gandul-khat)">Vermi Compost (Gandul Khat)</td>
+              <!-- <td data-i18n="price-vermi-compost">25/Kg</td> -->
             </tr>
             <tr>
               <td data-i18n="s5">5</td>
               <td data-i18n="vermiwash(vermi-wash)">Vermiwash</td>
+              <!-- <td data-i18n="price-vermiwash">60/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s6">6</td>
               <td data-i18n="dashparni-ark">Disharine Extract (Darshparni Ark)</td>
+              <!-- <td data-i18n="price-dashparni-ark">120/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s7">7</td>
               <td data-i18n="gomutra">Gomutra</td>
+              <!-- <td data-i18n="price-gomutra">30/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s8">8</td>
               <td data-i18n="gokrupamrit">Gokrupamrit</td>
+              <!-- <td data-i18n="price-gokrupamrit">30/L</td> -->
             </tr>
             <tr>
               <td data-i18n="s9">9</td>
               <td data-i18n="cow-dung-cake">Cow Dung Cake</td>
+              <!-- <td data-i18n="price-cow-dung-cake">5/Piece</td> -->
             </tr>
           </tbody>
         </table>
@@ -146,6 +215,104 @@
       </div>
     </section>
     
+    <section id="gau-chalisha" class="gau-chalisha-section">
+      <h2 class="section-title" data-i18n="gau-chalisha-title">गौ चालीसा</h2>
+      <div class="book-container">
+        <div class="book">
+          <div class="page" id="page1">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ दोहा ॥</h3>
+                <p>गऊ हमारी मातु है, हम पाले संतान।<br>
+                गऊ सेवा से मिलेगा, सब सुख संपति खान॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page2">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ चौपाई ॥</h3>
+                <p>जय गऊ माता कृपा तुम्हारी।<br>
+                दूर करो भवसागर भारी॥</p>
+                <p>गऊ ही ब्रह्मा, विष्णु गऊ।<br>
+                गऊ ही शिवरूप समऊ॥</p>
+                <p>गऊ में बास करे सब देव।<br>
+                गऊ सदा करे भव से सेव॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page3">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ चरन धरती पर ध्यानी।<br>
+                गऊ बिना जीवन अज्ञानी॥</p>
+                <p>गऊ दूध अमृत के समाना।<br>
+                जीवन का यह सच्चा खजाना॥</p>
+                <p>गऊ माता की जो सेवा।<br>
+                पावे जीवन में अमिट मेवा॥</p>
+                <p>गऊ को जो ग्रास खिलावे।<br>
+                उसका हर संकट टल जावे॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page4">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ की जो करे पूजा।<br>
+                भवसागर से पावे दूजा॥</p>
+                <p>गऊ रक्षा धर्म महान।<br>
+                गऊ वंश बढ़ावे खान॥</p>
+                <p>गऊ माता करे रखवाली।<br>
+                सदा बनी रहे घर में खुशहाली॥</p>
+                <p>जो करे गऊ माता की सेवा।<br>
+                उसका जीवन होवे मेवा॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page5">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <p>गऊ माता से नाता जोड़ो।<br>
+                अपने जीवन को उजियारा करो॥</p>
+                <p>जो गऊ को मारन धावे।<br>
+                वह नरक कुंड में जावे॥</p>
+                <p>गऊ माता को जो अपनाए।<br>
+                सात जनम सुख पावे॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+          <div class="page" id="page6">
+            <div class="page-content chalisa-flex">
+              <img src="media/elephant1.png" alt="Gau Mata Left" class="chalisa-elephant left-elephant">
+              <div class="chalisa-text">
+                <h3>॥ समापन दोहा ॥</h3>
+                <p>गऊ चालीसा जो कोई गावे।<br>
+                भवसागर से पार वो जावे॥</p>
+                <p>गऊ कृपा से जोड़े नाता।<br>
+                सफल हो जीवन, हर दिन पावन भ्राता॥</p>
+              </div>
+              <img src="media/elephant2.png" alt="Gau Mata Right" class="chalisa-elephant right-elephant">
+            </div>
+          </div>
+        </div>
+        <div class="book-controls">
+          <button class="prev-page" onclick="prevPage()">← पिछला पृष्ठ</button>
+          <span class="page-number">पृष्ठ <span id="current-page">1</span> / 6</span>
+          <button class="next-page" onclick="nextPage()">अगला पृष्ठ →</button>
+        </div>
+      </div>
+    </section>
+
     <section id="donate" class="section" data-aos="fade-up">
       <div class="container text-center">
         <h2 data-i18n="support_title">Support Us: Donate for the Future of Cows</h2>
@@ -162,7 +329,7 @@
           <p><strong>IFSC:</strong> DCBL0000014</p>
           <p><strong>UPI ID:</strong> Mswipe.1400041924000711@kotak</p>
         </div>
-        <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="btn btn-success donate-btn">Donate Online</a>
+        <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR&tn=Donation" class="btn btn-success donate-btn">Donate Online</a>
       </div>
     </section>
 
@@ -212,37 +379,147 @@
     <div id="narayan-chatbot-window" class="closed">
       <div class="narayan-header">NAARAD <span class="narayan-status">● online</span></div>
       <div id="narayan-chat-messages" class="narayan-messages">
-        
       </div>
-      <form id="narayan-chat-form">
-        <input type="text" id="narayan-chat-input" placeholder="Type your message..." autocomplete="off" required />
-        <button type="submit">Send</button>
-      </form>
     </div>
     <div class="chat-popup">Chat with NAARAD</div>
   </div>
 
-  <script src="lang.js"></script>
-  <script src="chatbot.js"></script>
+  <!-- Modal for desktop call info -->
+  <div id="callNowModal" class="callnow-modal" style="display:none;">
+    <div class="callnow-modal-content">
+      <span class="callnow-modal-close">&times;</span>
+      <p>Call us at <strong>8999158881</strong></p>
+    </div>
+  </div>
 
+  <script src="lang.js"></script>
+  <script src="js/chatgpt-service.js"></script>
+  <script src="chatbot.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const overlay = document.getElementById('site-fadein-overlay');
       
-      // Check if this is the first visit and if we're on index.html
-      if (!localStorage.getItem('hasVisitedBefore') && window.location.pathname.endsWith('index.html')) {
-        // Show the overlay for first-time visitors on index.html
+      // Check if this is the first visit or a restart
+      const hasVisited = sessionStorage.getItem('hasVisited');
+      
+      if (!hasVisited) {
+        // Show overlay only on first visit
         overlay.style.display = 'flex';
         setTimeout(() => {
           overlay.classList.add('fadeout');
           setTimeout(() => { overlay.style.display = 'none'; }, 800);
-        }, 1500);
+        }, 2000);
         
-        // Mark that the user has visited
-        localStorage.setItem('hasVisitedBefore', 'true');
+        // Set the flag in sessionStorage
+        sessionStorage.setItem('hasVisited', 'true');
       } else {
-        // Hide the overlay immediately for returning visitors or other pages
+        // Hide overlay immediately if not first visit
         overlay.style.display = 'none';
+      }
+
+      // Hamburger menu functionality
+      const hamburger = document.querySelector('.hamburger-menu');
+      const mainNav = document.querySelector('.main-nav');
+      const body = document.body;
+
+      function toggleMenu() {
+        mainNav.classList.toggle('active');
+        if (mainNav.classList.contains('active')) {
+          body.style.overflow = 'hidden';
+        } else {
+          body.style.overflow = '';
+        }
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking the X button
+      mainNav.addEventListener('click', function(e) {
+        if (e.target === this || e.target.tagName === 'A') {
+          mainNav.classList.remove('active');
+          body.style.overflow = '';
+        }
+      });
+
+      // Initialize gallery carousel with auto-scroll
+      $('#galleryCarousel').carousel({
+        interval: 3000  // 3 seconds
+      });
+      
+      // Make donate button draggable only on mobile
+      const donateBtn = document.querySelector('.donate-sidebar');
+      let isDragging = false;
+      let currentX;
+      let currentY;
+      let initialX;
+      let initialY;
+      let xOffset = 0;
+      let yOffset = 0;
+
+      function isMobile() {
+        return window.innerWidth <= 768;
+      }
+
+      function dragStart(e) {
+        if (!isMobile()) return;
+        
+        if (e.type === "touchstart") {
+          initialX = e.touches[0].clientX - xOffset;
+          initialY = e.touches[0].clientY - yOffset;
+        } else {
+          initialX = e.clientX - xOffset;
+          initialY = e.clientY - yOffset;
+        }
+
+        if (e.target === donateBtn) {
+          isDragging = true;
+          donateBtn.classList.add('dragging');
+        }
+      }
+
+      function dragEnd(e) {
+        if (!isMobile()) return;
+        
+        initialX = currentX;
+        initialY = currentY;
+        isDragging = false;
+        donateBtn.classList.remove('dragging');
+      }
+
+      function drag(e) {
+        if (!isMobile()) return;
+        
+        if (isDragging) {
+          e.preventDefault();
+
+          if (e.type === "touchmove") {
+            currentX = e.touches[0].clientX - initialX;
+            currentY = e.touches[0].clientY - initialY;
+          } else {
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+          }
+
+          xOffset = currentX;
+          yOffset = currentY;
+
+          setTranslate(currentX, currentY, donateBtn);
+        }
+      }
+
+      function setTranslate(xPos, yPos, el) {
+        el.style.transform = `translate(${xPos}px, ${yPos}px)`;
+      }
+
+      // Only add drag event listeners on mobile
+      if (isMobile()) {
+        donateBtn.addEventListener("touchstart", dragStart, false);
+        donateBtn.addEventListener("touchend", dragEnd, false);
+        donateBtn.addEventListener("touchmove", drag, false);
+
+        donateBtn.addEventListener("mousedown", dragStart, false);
+        donateBtn.addEventListener("mouseup", dragEnd, false);
+        donateBtn.addEventListener("mousemove", drag, false);
       }
 
       // Scroll to top button functionality
@@ -263,48 +540,92 @@
         });
       });
 
-      // Book page navigation
-      const bookPages = Array.from(document.querySelectorAll('.book-page')).sort((a, b) => {
-        return parseInt(a.dataset.page) - parseInt(b.dataset.page);
-      });
-      const prevButton = document.querySelector('.prev-page');
-      const nextButton = document.querySelector('.next-page');
-      let currentPage = 0;
+      // Initialize Gau Chalisha book
+      let currentPage = 1;
+      const totalPages = 6;
+      const pages = document.querySelectorAll('.page');
+      
+      // Show first page
+      pages[0].classList.add('active');
+      
+      // Update page number display
+      document.getElementById('current-page').textContent = currentPage;
 
-      function updatePages() {
-        bookPages.forEach((page, index) => {
-          page.classList.remove('active', 'next', 'prev');
-          if (index === currentPage) {
-            page.classList.add('active');
-          } else if (index === currentPage + 1) {
-            page.classList.add('next');
-          } else if (index === currentPage - 1) {
-            page.classList.add('prev');
-          }
-        });
-
-        // Update button states
-        prevButton.disabled = currentPage === 0;
-        nextButton.disabled = currentPage === bookPages.length - 1;
+      // Call Now button functionality
+      const callNowBtn = document.getElementById('callNowBtn');
+      const callNowModal = document.getElementById('callNowModal');
+      const callNowModalClose = document.querySelector('.callnow-modal-close');
+      function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
       }
-
-      // Initialize first page
-      updatePages();
-
-      // Event listeners for navigation
-      prevButton.addEventListener('click', () => {
-        if (currentPage > 0) {
-          currentPage--;
-          updatePages();
+      callNowBtn.addEventListener('click', function(e) {
+        if (isMobileDevice()) {
+          window.location.href = 'tel:8999158881';
+        } else {
+          e.preventDefault();
+          callNowModal.style.display = 'block';
         }
       });
-
-      nextButton.addEventListener('click', () => {
-        if (currentPage < bookPages.length - 1) {
-          currentPage++;
-          updatePages();
+      if (callNowModalClose) {
+        callNowModalClose.onclick = function() {
+          callNowModal.style.display = 'none';
+        };
+      }
+      window.onclick = function(event) {
+        if (event.target === callNowModal) {
+          callNowModal.style.display = 'none';
         }
-      });
+      };
+    });
+
+    // Page turning functions
+    function nextPage() {
+      const pages = document.querySelectorAll('.page');
+      const currentPage = parseInt(document.getElementById('current-page').textContent);
+      
+      if (currentPage < pages.length) {
+        const currentPageElement = pages[currentPage - 1];
+        const nextPageElement = pages[currentPage];
+        
+        // Start turning animation
+        currentPageElement.classList.add('turning');
+        
+        // After animation completes, switch pages
+        setTimeout(() => {
+          currentPageElement.classList.remove('active', 'turning');
+          nextPageElement.classList.add('active');
+          document.getElementById('current-page').textContent = currentPage + 1;
+        }, 500);
+      }
+    }
+
+    function prevPage() {
+      const pages = document.querySelectorAll('.page');
+      const currentPage = parseInt(document.getElementById('current-page').textContent);
+      
+      if (currentPage > 1) {
+        const currentPageElement = pages[currentPage - 1];
+        const prevPageElement = pages[currentPage - 2];
+        
+        // Start turning animation
+        currentPageElement.classList.add('turning');
+        
+        // After animation completes, switch pages
+        setTimeout(() => {
+          currentPageElement.classList.remove('active', 'turning');
+          prevPageElement.classList.add('active');
+          document.getElementById('current-page').textContent = currentPage - 1;
+        }, 500);
+      }
+    }
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') {
+        nextPage();
+      } else if (e.key === 'ArrowLeft') {
+        prevPage();
+      }
     });
 
     document.getElementById('volunteerForm').addEventListener('submit', function(e) {
@@ -342,3 +663,4 @@ ${name}`;
   </script>
 </body>
 </html>
+
