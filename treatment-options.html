@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -17,65 +18,89 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="lang-container">
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-      <option value="mr">मराठी</option>
-    </select>
+  <div id="site-fadein-overlay">
+    <span class="fadein-namaste">NAMASTE</span>
   </div>
-  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpol&cu=INR" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
+
+  <a href="upi://pay?pa=Mswipe.1400041924000711@kotak&pn=PoonaPanjarpoleTrust&cu=INR&tn=Donation" class="donate-sidebar" data-i18n="donate_now">Donate Now</a>
+  <a href="#" class="callnow-sidebar" id="callNowBtn"><img src="media/telephone.png" alt="Call Now" style="width:96px;height:96px;object-fit:contain;display:block;margin:0 auto;"> </a>
+  
   <header>
     <div class="header-content">
       <div class="title-row">
+        <button class="hamburger-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <img src="media/elephant1.png" alt="Elephant Left" class="elephant-image">
         <h1 data-i18n="title" class="site-title">Poona Panjarpole Trust</h1>
         <img src="media/elephant2.png" alt="Elephant Right" class="elephant-image">
+        <div class="lang-container">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="second-header">
+    <div class="header-content">
+      <div class="title-row">
+        <nav class="main-nav">
+          <a href="index.html"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
+          <a href="index.html#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
+          <a href="index.html#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
+          <a href="index.html#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
+          <a href="index.html#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a>
+          <a href="index.html#gau_chalisha"><span class="nav-icon">🐮</span> <span data-i18n="nav_gau_chalisha">Gau Chalisa</span></a>
+          <a href="index.html#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
+          <a href="index.html#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
+          <a href="index.html#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
+          <a href="index.html#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
+          <a href="#" class="active"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
+        </nav>
       </div>
     </div>
   </header>
 
 <main>
-  <nav class="floating-nav">
-    <a href="index.html"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a>
-    <a href="index.html#about"><span class="nav-icon">👤</span> <span data-i18n="nav_about">About Us</span></a>
-    <a href="index.html#mission"><span class="nav-icon">🎯</span> <span data-i18n="nav_mission">Our Mission</span></a>
-    <a href="index.html#gallery"><span class="nav-icon">🖼️</span> <span data-i18n="nav_gallery">Gallery</span></a>
-    <a href="index.html#products"><span class="nav-icon">🛒</span> <span data-i18n="nav_products">Products for Sale</span></a>
-    <a href="index.html#donate"><span class="nav-icon">💝</span> <span data-i18n="nav_support">Support Us</span></a>
-    <a href="index.html#volunteer"><span class="nav-icon">🤝</span> <span data-i18n="nav_volunteer">Volunteer</span></a>
-    <a href="index.html#contact"><span class="nav-icon">📞</span> <span data-i18n="nav_contact">Contact Us</span></a>
-    <a href="index.html#satellite_view"><span class="nav-icon">🌐</span> <span data-i18n="nav_satellite">3D Satellite View</span></a>
-    <a href="#" class="active"><span class="nav-icon">💊</span> <span data-i18n="nav_treatment">Treatment Options</span></a>
-  </nav>
-
-  <section id="treatment">
+  <section>
     <h2 data-i18n="treatment_title">Treatment Options</h2>
-    <p data-i18n="treatment_text">Here are some treatment options available for cattle:</p>
-    <div class="treatment-options">
-      <div class="treatment-option">
+    <div class="treatment-cards">
+      <div class="treatment-card">
+        <span class="treatment-icon">💉</span>
         <h3 data-i18n="treatment_vaccination_title">Vaccination</h3>
         <p data-i18n="treatment_vaccination_desc">Protection against common cattle diseases through regular vaccination drives.</p>
       </div>
-      <div class="treatment-option">
+      <div class="treatment-card">
+        <span class="treatment-icon">🩺</span>
         <h3 data-i18n="treatment_health_title">Health Check-ups</h3>
         <p data-i18n="treatment_health_desc">Routine health assessments to ensure early detection and prevention of illness.</p>
       </div>
-      <div class="treatment-option">
+      <div class="treatment-card">
+        <span class="treatment-icon">🐛</span>
         <h3 data-i18n="treatment_parasite_title">Parasite Control</h3>
         <p data-i18n="treatment_parasite_desc">Scheduled deworming and parasite management for healthy cattle.</p>
       </div>
-      <div class="treatment-option">
+      <div class="treatment-card">
+        <span class="treatment-icon">🥛</span>
         <h3 data-i18n="treatment_nutrition_title">Nutritional Support</h3>
         <p data-i18n="treatment_nutrition_desc">Balanced diet plans and supplements for optimal cattle health and productivity.</p>
       </div>
-      <div class="treatment-option">
+      <div class="treatment-card">
+        <span class="treatment-icon">🚑</span>
         <h3 data-i18n="treatment_emergency_title">Emergency Care</h3>
         <p data-i18n="treatment_emergency_desc">Immediate response and care for injuries or sudden illnesses.</p>
       </div>
-      <div class="treatment-option">
+      <div class="treatment-card">
+        <span class="treatment-icon">👨‍⚕️</span>
         <h3 data-i18n="treatment_vetconsult_title">Veterinary Consultations</h3>
         <p data-i18n="treatment_vetconsult_desc">Expert advice and treatment from experienced veterinarians.</p>
       </div>
@@ -151,92 +176,167 @@
   <div id="narayan-chatbot-window" class="closed">
     <div class="narayan-header">NAARAD <span class="narayan-status">● online</span></div>
     <div id="narayan-chat-messages" class="narayan-messages">
-      
     </div>
-    <form id="narayan-chat-form">
-      <input type="text" id="narayan-chat-input" placeholder="Type your message..." autocomplete="off" required />
-      <button type="submit">Send</button>
-    </form>
   </div>
   <div class="chat-popup">Chat with NAARAD</div>
 </div>
 
+<!-- Modal for desktop call info -->
+<div id="callNowModal" class="callnow-modal" style="display:none;">
+  <div class="callnow-modal-content">
+    <span class="callnow-modal-close">&times;</span>
+    <p>Call us at <strong>8999158881</strong></p>
+  </div>
+</div>
+
 <script src="lang.js"></script>
+<script src="js/chatgpt-service.js"></script>
 <script src="chatbot.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mainNav = document.querySelector('.main-nav');
+    const body = document.body;
+
+    function toggleMenu() {
+      mainNav.classList.toggle('active');
+      if (mainNav.classList.contains('active')) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking the X button
+    mainNav.addEventListener('click', function(e) {
+      if (e.target === this || e.target.tagName === 'A') {
+        mainNav.classList.remove('active');
+        body.style.overflow = '';
+      }
+    });
+
+    // Scroll to top button functionality
     const scrollToTopBtn = document.getElementById('scrollToTop');
     
-    // Show button when user scrolls down
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        scrollToTopBtn.style.display = 'flex';
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
         scrollToTopBtn.classList.add('visible');
       } else {
         scrollToTopBtn.classList.remove('visible');
       }
     });
 
-    // Smooth scroll to top when button is clicked
-    scrollToTopBtn.addEventListener('click', function() {
+    scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
 
-    // Initial check
-    if (window.scrollY > 100) {
-      scrollToTopBtn.style.display = 'flex';
-      scrollToTopBtn.classList.add('visible');
+    // Make donate button draggable only on mobile
+    const donateBtn = document.querySelector('.donate-sidebar');
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    function isMobile() {
+      return window.innerWidth <= 768;
     }
-  });
-</script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const book = document.querySelector('.book');
-    const pages = document.querySelectorAll('.book-page');
-    const prevBtn = document.querySelector('.prev-page');
-    const nextBtn = document.querySelector('.next-page');
-    let currentPage = 0;
+    function dragStart(e) {
+      if (!isMobile()) return;
+      
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
 
-    // Initialize first page
-    pages[0].classList.add('active');
+      if (e.target === donateBtn) {
+        isDragging = true;
+        donateBtn.classList.add('dragging');
+      }
+    }
 
-    function updatePages() {
-      pages.forEach((page, index) => {
-        page.classList.remove('active', 'next', 'prev');
-        if (index === currentPage) {
-          page.classList.add('active');
-        } else if (index < currentPage) {
-          page.classList.add('prev');
+    function dragEnd(e) {
+      if (!isMobile()) return;
+      
+      initialX = currentX;
+      initialY = currentY;
+      isDragging = false;
+      donateBtn.classList.remove('dragging');
+    }
+
+    function drag(e) {
+      if (!isMobile()) return;
+      
+      if (isDragging) {
+        e.preventDefault();
+
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
         } else {
-          page.classList.add('next');
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
         }
-      });
 
-      // Update button states
-      prevBtn.disabled = currentPage === 0;
-      nextBtn.disabled = currentPage === pages.length - 1;
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, donateBtn);
+      }
     }
 
-    prevBtn.addEventListener('click', () => {
-      if (currentPage > 0) {
-        currentPage--;
-        updatePages();
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = `translate(${xPos}px, ${yPos}px)`;
+    }
+
+    // Only add drag event listeners on mobile
+    if (isMobile()) {
+      donateBtn.addEventListener("touchstart", dragStart, false);
+      donateBtn.addEventListener("touchend", dragEnd, false);
+      donateBtn.addEventListener("touchmove", drag, false);
+
+      donateBtn.addEventListener("mousedown", dragStart, false);
+      donateBtn.addEventListener("mouseup", dragEnd, false);
+      donateBtn.addEventListener("mousemove", drag, false);
+    }
+
+    // Call Now button functionality
+    const callNowBtn = document.getElementById('callNowBtn');
+    const callNowModal = document.getElementById('callNowModal');
+    const callNowModalClose = document.querySelector('.callnow-modal-close');
+    function isMobileDevice() {
+      return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    }
+    callNowBtn.addEventListener('click', function(e) {
+      if (isMobileDevice()) {
+        window.location.href = 'tel:8999158881';
+      } else {
+        e.preventDefault();
+        callNowModal.style.display = 'block';
       }
     });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        updatePages();
+    if (callNowModalClose) {
+      callNowModalClose.onclick = function() {
+        callNowModal.style.display = 'none';
+      };
+    }
+    window.onclick = function(event) {
+      if (event.target === callNowModal) {
+        callNowModal.style.display = 'none';
       }
-    });
-
-    // Initialize button states
-    updatePages();
+    };
   });
 </script>
 </body>
